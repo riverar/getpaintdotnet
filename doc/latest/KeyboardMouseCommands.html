@@ -1,0 +1,874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- #BeginTemplate "PDN.dwt" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- #BeginEditable "doctitle" -->
+<title>Paint.NET Documentation</title>
+<!-- #EndEditable -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.treeview.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.treeview.js"></script>
+<!--- Start Google Analytics -->
+<script type="text/javascript">
+
+
+
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-2064642-2']);
+
+  _gaq.push(['_trackPageview']);
+
+
+
+  (function() {
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+  })();
+
+
+
+</script>
+<!--- End Google Analytics -->
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+jQuery(function(){
+$(document).ready(function () {
+			$("#menu").treeview({
+					collapsed: true,
+					persist: "location",
+					animated: "fast"
+								});
+	});
+});
+//]]>
+</script>
+<!-- #BeginEditable "head" -->
+<!-- #EndEditable -->
+</head>
+
+<body>
+<div id="wrapper">
+<div id="imagebar">
+    <div class="header">
+        <div id="pdnglassbar">
+      <h2 id="logo"><a href="index.html" id="logoimage">Paint.NET</a></h2>
+            <h3 id="sitename">Documentation</h3>
+            <div id="searchboxwrapper">
+            <!-- Google CSE Search Box Begins  -->
+  <form id="searchbox_017811919762320179081:vzb4fvaflui" action="http://www.google.com/cse">
+    <input type="hidden" name="cx" value="017811919762320179081:vzb4fvaflui" />
+    <input type="hidden" name="cof" value="FORID:1" />
+    <input name="q" type="text" size="40" />
+    <input type="submit" name="sa" value="Search" />
+  </form>
+  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_017811919762320179081%3Avzb4fvaflui"></script>
+<!-- Google CSE Search Box Ends -->
+            </div>
+        </div>
+        <div id="adcontainer">
+            <div id="adbanner">
+            <script type="text/javascript"><!--
+					google_ad_client = "pub-4343851330510276";
+					google_ad_width = 728;
+					google_ad_height = 90;
+					google_ad_format = "728x90_as";
+					google_ad_type = "text_image";
+					//2007-04-13: Help File - Top
+					google_ad_channel = "9289433033";
+					google_color_border = "FFFFFF";
+					google_color_bg = "FFFFFF";
+					google_color_link = "0000FF";
+					google_color_text = "000000";
+					google_color_url = "008000";
+					//-->
+				</script>
+				<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div id="shadowunderimage"></div>
+<div id="contentcontainer">
+	<div id="menuarea">
+    	<ul id="menu">
+        	<li class="primarymenu">Getting Started with Paint.NET
+            	<ul class="secondarymenu">
+                	<li class="secondarymenuselect"><a href="index.html">Overview/Features</a></li>
+					<li class="secondarymenuselect"><a href="SystemRequirements.html">System Requirements</a></li>
+					<li class="secondarymenuselect"><a href="InstallPDN.html">Installing Paint.NET</a>
+                       <ul class="tertiarymenu">
+                    	<li class="tertiarymenuselect"><a href="InstallPlugins.html">Installing Additional Plugins</a></li>
+                    	<li class="tertiarymenuselect"><a href="UnattendedInstallation.html">Unattended Installation</a></li>
+                       </ul>
+                    </li>
+					<li class="secondarymenuselect"><a href="FAQ.html">FAQ (Frequently Asked Questions)</a></li>
+                    <li class="secondarymenuselect"><a href="KeyboardMouseCommands.html">Keyboard &amp; Mouse Commands</a></li>
+                    <li class="secondarymenuselect"><a href="Tutorials.html">Tutorials</a></li>
+                </ul>
+            </li>
+            <li class="primarymenu">Main Window
+            	<ul class="secondarymenu">
+                	<li class="secondarymenuselect"><a href="MainWindow.html">Main Window Components</a></li>
+					<li class="secondarymenuselect"><a href="ImageList.html">Image List</a></li>
+					<li class="secondarymenuselect"><a href="MenuBar.html">Menu Bar</a></li>
+					<li class="secondarymenuselect"><a href="Toolbar.html">Toolbar</a></li>
+                    <li class="secondarymenuselect"><a href="StatusBar.html">Status Bar</a></li>
+                </ul>
+             </li>
+              <li class="primarymenu">Menu Options
+            	<ul class="secondarymenu">
+                	<li class="secondarymenuselect"><a href="FileMenu.html">File</a></li>
+					<li class="secondarymenuselect"><a href="EditMenu.html">Edit</a></li>
+					<li class="secondarymenuselect"><a href="ViewMenu.html">View</a></li>
+					<li class="secondarymenuselect"><a href="ImageMenu.html">Image</a></li>
+                    <li class="secondarymenuselect"><a href="LayersMenu.html">Layers</a>
+                        <ul class="tertiarymenu">
+                            <li class="tertiarymenuselect"><a href="RotateZoom.html">Rotate/Zoom</a></li>
+                        </ul>
+                    </li>
+                    <li class="secondarymenuselect"><a href="AdjustmentsMenu.html">Adjustments</a>
+                        <ul class="tertiarymenu">
+                            <li class="tertiarymenuselect"><a href="Curves.html">Curves</a></li>
+                            <li class="tertiarymenuselect"><a href="Levels.html">Levels</a></li>
+                        </ul>
+                    </li>
+                    <li class="secondarymenuselect"><a href="EffectsMenu.html">Effects</a>
+                        <ul class="tertiarymenu">
+                            <li class="tertiarymenuselect"><a href="EffectsArtisticMenu.html">Artistic</a></li>
+                            <li class="tertiarymenuselect"><a href="EffectsBlursMenu.html">Blurs</a></li>
+                            <li class="tertiarymenuselect"><a href="EffectsDistortMenu.html">Distort</a></li>
+                            <li class="tertiarymenuselect"><a href="EffectsNoiseMenu.html">Noise</a></li>
+                            <li class="tertiarymenuselect"><a href="EffectsPhotoMenu.html">Photo</a></li>
+                            <li class="tertiarymenuselect"><a href="EffectsRenderMenu.html">Render</a></li>
+                            <li class="tertiarymenuselect"><a href="EffectsStylizeMenu.html">Stylize</a></li>
+                        </ul>
+                    </li>
+                    <li class="secondarymenuselect"><a href="UtilitiesMenu.html">Utilities</a></li>
+					<li class="secondarymenuselect"><a href="WindowMenu.html">Window</a></li>
+					<li class="secondarymenuselect"><a href="HelpMenu.html">Help</a></li>                    
+                </ul>
+             </li>
+             <li class="primarymenu">Tools Window
+            	<ul class="secondarymenu">
+                	<li class="secondarymenuselect"><a href="ToolsWindow.html">Tools Window Components</a></li>
+					<li class="secondarymenuselect"><a href="SelectionTools.html">Selection Tools</a>
+                    	<ul class="tertiarymenu">
+                            <li class="tertiarymenuselect"><a href="ShapeSelectionTools.html">Shape Selection</a></li>
+                            <li class="tertiarymenuselect"><a href="MagicWand.html">Magic Wand</a></li>
+                        </ul>
+                    </li>
+					<li class="secondarymenuselect"><a href="MoveTools.html">Move Tools</a></li>
+					<li class="secondarymenuselect"><a href="ViewTools.html">View Tools</a></li>
+                    <li class="secondarymenuselect"><a href="FillTools.html">Fill Tools</a>
+                    	<ul class="tertiarymenu">
+                            <li class="tertiarymenuselect"><a href="PaintBucket.html">Paint Bucket Tool</a></li>
+                            <li class="tertiarymenuselect"><a href="GradientTool.html">Gradient Tool</a></li>
+                        </ul>
+                    </li>
+                    <li class="secondarymenuselect"><a href="DrawingTools.html">Drawing Tools</a>
+                    	<ul class="tertiarymenu">
+                            <li class="tertiarymenuselect"><a href="Paintbrush.html">Paintbrush Tool</a></li>
+                            <li class="tertiarymenuselect"><a href="EraserTool.html">Eraser Tool</a></li>
+                            <li class="tertiarymenuselect"><a href="Pencil.html">Pencil Tool</a></li>
+                      </ul>
+                    </li>
+                    <li class="secondarymenuselect"><a href="PhotoTools.html">Photo Tools</a>
+                    	<ul class="tertiarymenu">
+                            <li class="tertiarymenuselect"><a href="ColorPicker.html">Color Picker Tool</a></li>
+                            <li class="tertiarymenuselect"><a href="CloneStamp.html">Clone Stamp Tool</a></li>
+                            <li class="tertiarymenuselect"><a href="RecolorTool.html">Recolor Tool</a></li>
+                        </ul>
+                    </li>
+                    <li class="secondarymenuselect"><a href="TextShapeTools.html">Text and Shape Tools</a>
+                    	<ul class="tertiarymenu">
+                            <li class="tertiarymenuselect"><a href="TextTool.html">Text Tool</a></li>
+                            <li class="tertiarymenuselect"><a href="LineCurveTool.html">Line/Curve Tool</a></li>
+                            <li class="tertiarymenuselect"><a href="ShapeTools.html">Geometric Shape Tools</a></li>
+                        </ul>
+                    </li>
+               </ul>
+             </li>
+             <li class="primarymenu">Layers Window
+            	<ul class="secondarymenu">
+                	<li class="secondarymenuselect"><a href="LayersWindow.html">Layers Window Components</a></li>
+					<li class="secondarymenuselect"><a href="WorkingWithLayers.html">Working with Layers</a></li>
+					<li class="secondarymenuselect"><a href="BlendModes.html">Blend Modes</a></li>
+                </ul>
+             </li>
+             <li class="primarymenu">Colors Window
+            	<ul class="secondarymenu">
+                	<li class="secondarymenuselect"><a href="ColorsWindow.html">Colors Window Components</a></li>
+					<li class="secondarymenuselect"><a href="WorkingWithPalettes.html">Working with Palettes</a></li>
+                </ul>
+             </li>
+             <li class="primarymenu">History Window
+            	<ul class="secondarymenu">
+                	<li class="secondarymenuselect"><a href="HistoryWindow.html">History Window Components</a></li>
+                </ul>
+             </li>
+             <li class="primarymenu">Other
+            	<ul class="secondarymenu">
+                	<li class="secondarymenuselect"><a href="WebLinks.html">Web Links</a></li>
+					<li class="secondarymenuselect"><a href="License.html">License</a></li>
+                </ul>
+             </li>
+        </ul>
+    </div>
+    <div id="helpcontent"><!-- #BeginEditable "sectiontitle" -->
+  <h1 class="sectiontitle">Keyboard &amp; Mouse Commands</h1>
+    <!-- #EndEditable -->
+      <div id="translatecontainer">
+        <div id="MicrosoftTranslatorWidget" style="width: 311px; min-height: 57px; border-color: #404040; background-color: #A0A0A0;"><noscript><a href="http://www.microsofttranslator.com/bv.aspx?a=http%3a%2f%2fwww.getpaint.net%2f">Translate this page</a><br />Powered by <a href="http://www.microsofttranslator.com">Microsoft® Translator</a></noscript></div> <script type="text/javascript"> /* <![CDATA[ */ setTimeout(function() { var s = document.createElement("script"); s.type = "text/javascript"; s.charset = "UTF-8"; s.src = ((location && location.href && location.href.indexOf('https') == 0) ? "https://ssl.microsofttranslator.com" : "http://www.microsofttranslator.com" ) + "/ajax/v2/widget.aspx?mode=manual&from=en&layout=ts"; var p = document.getElementsByTagName('head')[0] || document.documentElement; p.insertBefore(s, p.firstChild); }, 0); /* ]]> */ </script> 
+        </div>
+      <!-- #BeginEditable "content" -->
+  <p>Most commands in Paint.NET can be quickly accessed via the keyboard. For your convenience, all of those commands are listed here.</p>
+  <table>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">General Canvas Controls</h2></td>
+    </tr>
+    <tr>
+    <td><p>Pan image (does not work while typing with the Text tool)</p></td>
+    <td><p>Hold spacebar + drag with left mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Scroll up / down</p></td>
+    <td><p>Mouse Wheel up / down</p></td>
+    </tr>
+    <tr>
+    <td><p>Scroll left / right</p></td>
+    <td><p>Shift + Mouse Wheel up / down</p></td>
+    </tr>
+    <tr>
+    <td><p>Zoom in / out</p></td>
+    <td><p>Ctrl + Mouse Wheel</p></td>
+    </tr>
+    <tr>
+    <td><p>Deselect (remove selection)</p></td>
+    <td><p>Esc or Enter</p></td>
+    </tr>
+    <tr>
+    <td><p>Shift current tool per pixel</p></td>
+    <td><p>Arrow Keys (May not work in all tools)</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Image List and Image Navigation</h2></td>
+    </tr>
+    <tr>
+    <td><p>Next tab</p></td>
+    <td><p>Ctrl + Tab</p></td>
+    </tr>
+    <tr>
+    <td><p>Previous tab</p></td>
+    <td><p>Ctrl + Shift + Tab</p></td>
+    </tr>
+    <tr>
+    <td><p>Show Image List</p></td>
+    <td><p>Ctrl + Q</p></td>
+    </tr>
+    <tr>
+    <td><p>Switch to image #, for images 1 through 10</p></td>
+    <td><p>Ctrl + # or Alt + #, where # is 1 through 9 for images 1 through 9, or 0 for image 10</p></td>
+    </tr>
+    <tr>
+    <td><p>Scroll image list</p></td>
+    <td><p>Mouse wheel (only if the mouse cursor is in the image list area)</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Toolbar</h2></td>
+    </tr>
+    <tr>
+    <td><p>Decrease brush width by 1</p></td>
+    <td><p>[</p></td>
+    </tr>
+    <tr>
+    <td><p>Decrease brush width by 5</p></td>
+    <td><p>Ctrl + [</p></td>
+    </tr>
+    <tr>
+    <td><p>Increase brush width by 1</p></td>
+    <td><p>]</p></td>
+    </tr>
+    <tr>
+    <td><p>Increase brush width by 5</p></td>
+    <td><p>Ctrl + ]</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><p>Move Tools</p></td>
+    </tr>
+    <tr>
+    <td><p>Resize the selection</p></td>
+    <td><p>Drag one of the corner or edge nubs</p></td>
+    </tr>
+    <tr>
+    <td><p>Resize the selection while maintaining its original aspect / proportions</p></td>
+    <td><p>Hold down Shift while dragging one of the corner nubs</p></td>
+    </tr>
+    <tr>
+    <td><p>Move the selection</p></td>
+    <td><p>Drag anywhere except on the nubs with the left mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Rotate the selection</p></td>
+    <td><p>Drag anywhere with the right mouse button</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Selection Tools (except Magic Wand)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h3 class="detailtitle">Note: While a selection is active, all drawing, and many other commands, will only draw or have effect inside the selection.</h3></td>
+    </tr>
+    <tr>
+    <td><p>Create new selection, replacing any old selection if there was one</p></td>
+    <td><p>Draw with left mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Add to the current selection (union)</p></td>
+    <td><p>Draw with Ctrl + left mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Subtract from the current selection (difference)</p></td>
+    <td><p>Draw with Alt + left mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Invert a given area of the selection (exclusive-or)</p></td>
+    <td><p>Draw with Ctrl + right mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Get the intersection of the current selection and a new one</p></td>
+    <td><p>Draw with Alt + right mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Constrain to square (Rectangle Select), or circle (Ellipse Select)</p></td>
+    <td><p>Hold Shift while drawing</p></td>
+    </tr>
+    <tr>
+    <td><p>Move the new selection while still drawing it</p></td>
+    <td><p>While drawing with left mouse button, also hold the right mouse button and move mouse</p></td>
+    </tr>
+    <tr>
+    <td><p>Move the new selection while still drawing it</p></td>
+    <td><p>While drawing with right mouse button, also hold the left mouse button and move mouse</p></td>
+    </tr>
+    <tr>
+    <td><h3 class="detailtitle">(Move Selected Pixels Tool Only) Manipulate a copy of the selected area instead of the original pixels </h3></td>
+    <td><p>Hold Ctrl while using the tool</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Colors Window&nbsp; </h2></td>
+    </tr>
+    <tr>
+    <td><p>Swap primary and secondary colors</p></td>
+    <td><p>X</p></td>
+    </tr>
+    <tr>
+    <td><p>Switch the active color in the dropdown box</p></td>
+    <td><p>C</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Magic Wand Tool</h2></td>
+    </tr>
+    <tr>
+    <td><p>Create new selection from pixels in the surrounding area that resemble the pixel you clicked on, replacing any old selection if there was one (resemblance is determined by the Tolerance setting)</p></td>
+    <td><p>Left mouse click</p></td>
+    </tr>
+    <tr>
+    <td><p>Add to the current selection (union)</p></td>
+    <td><p>Ctrl + Left mouse click</p></td>
+    </tr>
+    <tr>
+    <td><p>Subtract from the current selection (difference)</p></td>
+    <td><p>Alt + Left mouse click</p></td>
+    </tr>
+    <tr>
+    <td><p>Invert a portion of the selection (exclusive-or)</p></td>
+    <td><p>Ctrl + Right mouse click</p></td>
+    </tr>
+    <tr>
+    <td><p>Get the intersection of the current selection and the new area as 
+	determine by the Magic Wand</p></td>
+    <td><p>Alt + Right mouse click</p></td>
+    </tr>
+    <tr>
+    <td><p>Do a global selection across the entire layer based on the color you click on and the Tolerance setting</p></td>
+    <td><p>Hold Shift with one of the five commands listed above</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Text Tool</h2></td>
+    </tr>
+    <tr>
+    <td><p>Temporarily hide the cursor and nub</p></td>
+    <td><p>Hold Ctrl</p></td>
+    </tr>
+    <tr>
+    <td><p>Toggle the nub's visibility</p></td>
+    <td><p>Tap Ctrl</p></td>
+    </tr>
+    <tr>
+    <td><p>Finish text and commit it to the layer</p></td>
+    <td><p>Esc</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><p>Paintbrush Tool</p></td>
+    </tr>
+    <tr>
+    <td><p>Draw with the primary color</p></td>
+    <td><p>Draw with left mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Draw with the secondary color</p></td>
+    <td><p>Draw with right mouse button</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Eraser Tool</h2></td>
+    </tr>
+    <tr>
+    <td><p>Erase an area (set the pixels to transparent)</p></td>
+    <td><p>Draw with left or right mouse button</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Clone Stamp Tool</h2></td>
+    </tr>
+    <tr>
+    <td><p>Set the source point, or &quot;origin&quot;</p></td>
+    <td><p>Ctrl + Left click</p></td>
+    </tr>
+    <tr>
+    <td><p>Copy pixels (you must have already set the source point, or &quot;origin&quot;, with Ctrl + left click)</p></td>
+    <td><p>Draw with left mouse button</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Recolor Tool</h2></td>
+    </tr>
+    <tr>
+    <td><p>Pick up the color under the mouse cursor, and set it as the primary color</p></td>
+    <td><p>Ctrl + Left click</p></td>
+    </tr>
+    <tr>
+    <td><p>Pick up the color under the mouse cursor, and set it as the secondary color</p></td>
+    <td><p>Ctrl + Right click</p></td>
+    </tr>
+    <tr>
+    <td><p>Draw with the primary color, but only over pixels that resemble the secondary color (resemblance is determined by the Tolerance setting)</p></td>
+    <td><p>Draw with left mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Draw with the secondary color, but only over pixels that resemble the primary color (resemblance is determined by the Tolerance setting)</p></td>
+    <td><p>Draw with right mouse button</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Paint Bucket Tool</h2></td>
+    </tr>
+    <tr>
+    <td><p>Fill the surrounding area with the primary color.</p></td>
+    <td><p>Left mouse click</p></td>
+    </tr>
+    <tr>
+    <td><p>Fill the surrounding area with the secondary color</p></td>
+    <td><p>Right mouse click</p></td>
+    </tr>
+    <tr>
+    <td><p>Do a global fill across the entire layer based on the color you click on and the Tolerance setting</p></td>
+    <td><p>Hold Shift with one of the two commands listed above</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Text and Shape Tools</h2></td>
+    </tr>
+    <tr>
+    <td><p>Draw shape. Outline uses the primary color, interior uses the secondary color.</p></td>
+    <td><p>Draw with left mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Draw shape. Outline uses the secondary color, interior uses the primary color.</p></td>
+    <td><p>Draw with right mouse button</p></td>
+    </tr>
+    <tr>
+    <td><p>Constrain to square (Rectangle), rounded square (Rounded Rectangle), circle (Ellipse), or 15° angle (Line / Curve)</p></td>
+    <td><p>Hold Shift while drawing</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Line/Curve Tool</h2></td>
+    </tr>
+    <tr>
+    <td><p>Cycle start-cap style</p></td>
+    <td><p>, (comma)</p></td>
+    </tr>
+    <tr>
+    <td><p>Cycle dash style</p></td>
+    <td><p>. (period)</p></td>
+    </tr>
+    <tr>
+    <td><p>Cycle end-cap style</p></td>
+    <td><p>/ (forward slash)</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Tool shortcuts</h2></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h3 class="detailtitle">Note: If more than one tool shares a shortcut key, you will need to press the shortcut key multiple times to cycle through the tools that share the particular shortcut key.</h3></td>
+    </tr>
+    <tr>
+    <td><p>Rectangle Select</p></td>
+    <td><p>S</p></td>
+    </tr>
+    <tr>
+    <td><p>Lasso Select</p></td>
+    <td><p>S</p></td>
+    </tr>
+    <tr>
+    <td><p>Ellipse Select</p></td>
+    <td><p>S</p></td>
+    </tr>
+    <tr>
+    <td><p>Magic Wand</p></td>
+    <td><p>S</p></td>
+    </tr>
+    <tr>
+    <td><p>Move Selected Pixels</p></td>
+    <td><p>M</p></td>
+    </tr>
+    <tr>
+    <td><p>Move Selection</p></td>
+    <td><p>M</p></td>
+    </tr>
+    <tr>
+    <td><p>Zoom</p></td>
+    <td><p>Z</p></td>
+    </tr>
+    <tr>
+    <td><p>Pan (&quot;hand&quot;)</p></td>
+    <td><p>H</p></td>
+    </tr>
+    <tr>
+    <td><p>Paint Bucket</p></td>
+    <td><p>F</p></td>
+    </tr>
+    <tr>
+    <td><p>Gradient</p></td>
+    <td><p>G</p></td>
+    </tr>
+    <tr>
+    <td><p>Paintbrush</p></td>
+    <td><p>B</p></td>
+    </tr>
+    <tr>
+    <td><p>Eraser</p></td>
+    <td><p>E</p></td>
+    </tr>
+    <tr>
+    <td><p>Pencil</p></td>
+    <td><p>P</p></td>
+    </tr>
+    <tr>
+    <td><p>Color Picker</p></td>
+    <td><p>K</p></td>
+    </tr>
+    <tr>
+    <td><p>Clone Stamp</p></td>
+    <td><p>L</p></td>
+    </tr>
+    <tr>
+    <td><p>Recolor</p></td>
+    <td><p>R</p></td>
+    </tr>
+    <tr>
+    <td><p>Text</p></td>
+    <td><p>T</p></td>
+    </tr>
+    <tr>
+    <td><p>Line / Curve</p></td>
+    <td><p>O</p></td>
+    </tr>
+    <tr>
+    <td><p>Rectangle</p></td>
+    <td><p>O</p></td>
+    </tr>
+    <tr>
+    <td><p>Rounded Rectangle</p></td>
+    <td><p>O</p></td>
+    </tr>
+    <tr>
+    <td><p>Ellipse</p></td>
+    <td><p>O</p></td>
+    </tr>
+    <tr>
+    <td><p>Freeform Shape</p></td>
+    <td><p>O</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">File menu</h2></td>
+    </tr>
+    <tr>
+    <td><p>New</p></td>
+    <td><p>Ctrl + N</p></td>
+    </tr>
+    <tr>
+    <td><p>Open</p></td>
+    <td><p>Ctrl + O</p></td>
+    </tr>
+    <tr>
+    <td><p>Close</p></td>
+    <td><p>Ctrl + W, or Ctrl + F4</p></td>
+    </tr>
+    <tr>
+    <td><p>Save</p></td>
+    <td><p>Ctrl + S</p></td>
+    </tr>
+    <tr>
+    <td><p>Save As</p></td>
+    <td><p>Ctrl + Shift + S</p></td>
+    </tr>
+    <tr>
+    <td><p>Print</p></td>
+    <td><p>Ctrl + P</p></td>
+    </tr>
+    <tr>
+    <td><p>Exit</p></td>
+    <td><p>Alt + F4, or Alt + F then X, or Ctrl + W when no images are open</p></td>
+    </tr>
+    <tr>
+    <td colspan="2"><h2 class="sectionsubtitle">Edit menu</h2></td>
+    </tr>
+    <tr>
+    <td><p>Undo</p></td>
+    <td><p>Ctrl + Z</p></td>
+    </tr>
+    <tr>
+    <td><p>Redo</p></td>
+    <td><p>Ctrl + Y</p></td>
+    </tr>
+    <tr>
+    <td><p>Cut</p></td>
+    <td><p>Ctrl + X, or Shift + Delete</p></td>
+    </tr>
+    <tr>
+    <td><p>Copy</p></td>
+    <td><p>Ctrl + C, or Ctrl + Insert</p></td>
+    </tr>
+    <tr>
+    <td><p>Paste</p></td>
+    <td><p>Ctrl + V, or Shift + Insert</p></td>
+    </tr>
+    <tr>
+    <td><p>Paste in to New Layer</p></td>
+    <td><p>Ctrl + Shift + V</p></td>
+    </tr>
+    <tr>
+    <td><p>Paste in to New Image</p></td>
+    <td><p>Ctrl + Alt + V</p></td>
+    </tr>
+    <tr>
+    <td><p>Erase Selection</p></td>
+    <td><p>Delete</p></td>
+    </tr>
+    <tr>
+    <td><p>Fill Selection</p></td>
+    <td><p>Backspace</p></td>
+    </tr>
+    <tr>
+    <td><p>Invert Selection</p></td>
+    <td><p>Ctrl + I</p></td>
+    </tr>
+    <tr>
+    <td><p>Select All</p></td>
+    <td><p>Ctrl + A</p></td>
+    </tr>
+    <tr>
+        <td><p>Deselect</p></td>
+          <td><p>Ctrl + D</p></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 class="sectionsubtitle">Image menu</h2></td>
+        </tr>
+        <tr>
+          <td><p>Crop to   Selection</p></td>
+          <td><p>Ctrl +   Shift + X</p></td>
+        </tr>
+        <tr>
+          <td><p>Resize</p></td>
+          <td><p>Ctrl + R</p></td>
+        </tr>
+        <tr>
+          <td><p>Canvas   Size</p></td>
+          <td><p>Ctrl +   Shift + R</p></td>
+        </tr>
+        <tr>
+          <td><p>Rotate   90° (clockwise)</p></td>
+          <td><p>Ctrl + G</p></td>
+        </tr>
+        <tr>
+          <td><p>Rotate   90° (counter-clockwise)</p></td>
+          <td><p>Ctrl + H</p></td>
+        </tr>
+        <tr>
+          <td><p>Rotate   180°</p></td>
+          <td><p>Ctrl + J</p></td>
+        </tr>
+        <tr>
+          <td><p>Flatten</p></td>
+          <td><p>Ctrl +   Shift + F</p></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 class="sectionsubtitle">Layers menu</h2></td>
+        </tr>
+        <tr>
+          <td><p>Add New   Layer</p></td>
+          <td><p>Ctrl +   Shift + N</p></td>
+        </tr>
+        <tr>
+          <td><p>Delete   Layer</p></td>
+          <td><p>Ctrl +   Shift + Delete</p></td>
+        </tr>
+        <tr>
+          <td><p>Duplicate   Layer</p></td>
+          <td><p>Ctrl +   Shift + D</p></td>
+        </tr>
+        <tr>
+          <td><p>Merge   Layer Down</p></td>
+          <td><p>Ctrl + M</p></td>
+        </tr>
+        <tr>
+          <td><p>Rotate /   Zoom</p></td>
+          <td><p>Ctrl +   Shift + Z</p></td>
+        </tr>
+        <tr>
+          <td><p>Layer   Properties</p></td>
+          <td><p>F4</p></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 class="sectionsubtitle">Adjustments menu</h2></td>
+        </tr>
+        <tr>
+          <td><p>Auto-Level</p></td>
+          <td><p>Ctrl +   Shift + L</p></td>
+        </tr>
+        <tr>
+          <td><p>Brightness   / Contrast</p></td>
+          <td><p>Ctrl +   Shift + C</p></td>
+        </tr>
+        <tr>
+          <td><p>Curves</p></td>
+          <td><p>Ctrl +   Shift + M</p></td>
+        </tr>
+        <tr>
+          <td><p>Black   &amp; White</p></td>
+          <td><p>Ctrl +   Shift + G</p></td>
+        </tr>
+        <tr>
+          <td><p>Hue /   Saturation</p></td>
+          <td><p>Ctrl +   Shift + U</p></td>
+        </tr>
+        <tr>
+          <td><p>Invert   Colors</p></td>
+          <td><p>Ctrl + Shift   + I</p></td>
+        </tr>
+        <tr>
+          <td><p>Levels</p></td>
+          <td><p>Ctrl + L</p></td>
+        </tr>
+        <tr>
+          <td><p>Posterize</p></td>
+          <td><p>Ctrl +   Shift + P</p></td>
+        </tr>
+        <tr>
+          <td><p>Sepia</p></td>
+          <td><p>Ctrl +   Shift + E</p></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 class="sectionsubtitle">Effects menu</h2></td>
+        </tr>
+        <tr>
+          <td><p>Repeat   last effect</p></td>
+          <td><p>Ctrl + F</p></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 class="sectionsubtitle">View menu</h2></td>
+        </tr>
+        <tr>
+          <td><p>Zoom In</p></td>
+          <td><p>Ctrl + +</p></td>
+        </tr>
+        <tr>
+          <td><p>Zoom Out</p></td>
+          <td><p>Ctrl + -</p></td>
+        </tr>
+        <tr>
+          <td><p>Zoom to   Window</p></td>
+          <td><p>Ctrl + B</p></td>
+        </tr>
+        <tr>
+          <td><p>Zoom to   Selection</p></td>
+          <td><p>Ctrl +   Shift + B</p></td>
+        </tr>
+        <tr>
+          <td><p>Actual   Size</p></td>
+          <td><p>Ctrl +   Shift + A or Ctrl + Alt + 0</p></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 class="sectionsubtitle">Window menu</h2></td>
+        </tr>
+        <tr>
+          <td><p>Tools   (toggle)</p></td>
+          <td><p>F5</p></td>
+        </tr>
+        <tr>
+          <td><p>History   (toggle)</p></td>
+          <td><p>F6</p></td>
+        </tr>
+        <tr>
+          <td><p>Layers   (toggle)</p></td>
+          <td><p>F7</p></td>
+        </tr>
+        <tr>
+          <td><p>Colors   (toggle)</p></td>
+          <td><p>F8</p></td>
+        </tr>
+        <tr>
+          <td><p>Show   Image List</p></td>
+          <td><p>Ctrl + Q</p></td>
+        </tr>
+        <tr>
+          <td><p>Next Tab</p></td>
+          <td><p>Ctrl +   Tab</p></td>
+        </tr>
+        <tr>
+          <td><p>Previous   Tab</p></td>
+          <td><p>Ctrl +   Shift + Tab</p></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 class="sectionsubtitle">Help menu</h2></td>
+        </tr>
+        <tr>
+          <td><p>Help   Topics</p></td>
+          <td><p>F1</p></td>
+        </tr>
+        <tr>
+          <td><p>Paint.NET   Search</p></td>
+          <td><p>Ctrl + E</p></td>
+        </tr>
+      </table>
+      <!-- #EndEditable -->
+      </div>
+</div>
+<div class="clear"></div>
+<div class="push"></div>
+</div>
+<div class="clear"></div>
+
+<div id="footer">
+<p class="footercontent">Copyright © <a href="http://www.dotpdn.com/">dotPDN LLC</a> and Rick Brewster.<br />
+<a href="../../privacy.html">Privacy Information</a></p>
+</div>
+
+</body>
+<!-- #EndTemplate -->
+</html>
