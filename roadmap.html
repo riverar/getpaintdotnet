@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 
 <!-- #BeginTemplate "pdn_en.dwt" -->
 
@@ -63,9 +63,9 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 							<table border="0" width="100%" cellspacing="0" cellpadding="0" id="table5">
 								<tr>
 									<td width="100%" valign="top">
-										<h5 style="text-align: left">&nbsp;<a href="index.html">Home</a>&nbsp;&nbsp; 
-										<a href="features.html">Features</a>&nbsp;&nbsp; 
-										<b> 
+										<h5 style="text-align: left">&nbsp;<a href="index.html">Home</a>&nbsp;&nbsp;
+										<a href="features.html">Features</a>&nbsp;&nbsp;
+										<b>
 										<a href="donate.html">Donate</a></b>&nbsp;&nbsp;
 										<a href="download.html">Download</a>&nbsp;&nbsp;
 										<a href="roadmap.html">Roadmap</a>&nbsp;&nbsp;
@@ -93,506 +93,749 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 		<table border="0" width="100%" id="table6">
 			<tr>
 				<td>
-				<p style="text-align: left"><b>Roadmap and Change Log</b><br>
-				<font size="2"><strong><br>
-				Paint.NET v4.0</strong><br>
-				This release is a long ways away, but development has been 
-				going strong. For the latest information on the latest 
-				developments, check out <a href="http://blog.getpaint.net">the Paint.NET 
-				blog</a>.</font></p>
-				<p style="text-align: left"><font size="2">Features planned for 
-				version 4.0 include a new UI, improved extensibility, revamped 
-				brushes and shapes system, antialiased selections, and adjustment layers. The 
-				improvements to the application model and rendering engine 
-				should also enable a rich set of features to be added throughout 
-				the 4.x lifetime.</font></p>
-				<a name="v3_5"></a>
-				
-				<p><font size="2"><b>Paint.NET v3.5.10 </b>- 
-				<a href="download.html">Download</a>, released on October 9th, 
-				2011<br>This update fixes some broken shortcut keys for the View -&gt; Actual Size command.</font>
-				
+                    <p style="text-align: left">
+                        <b>Roadmap and Change Log</b><br>
+<font size="2"><strong><br>
+				paint.net 4.0.5 - </strong><a href="download.html">Download</a>, released on December 7th, 2014<br>
+                This update fixes a few important bugs, some of which were introduced in 4.0.4.</font></p>
+
 				<ul><font size="2">
-					<li>Fixed: Ctrl+Shift+A now works again as a shortcut for 
+					<li><strong>Fixed</strong>: Subtraction mode in the Magic Wand tool was generating B-A instead of A-B.</li>
+					<li><strong>Fixed</strong>: Crash when using Effect-&gt;Repeat.</li>
+					<li><strong>Fixed</strong>: Crash (AccessViolationException) on some systems when initializing the canvas for hardware accelerated rendering. It will still crash but then switch to software rendering for the next startup, which will then avoid the crashing.</li>
+					<li><strong>Fixed</strong>: Crash when clicking on the Shapes tool if you had run an old 4.0 beta/alpha and had also changed which shape is used at startup to be a line or curve.</li>
+					<li><strong>Fixed</strong>: Crash when using Settings -&gt; Update -&gt; Check Now due to incorrectly determining that UAC is not enabled.</li>
+				</font></ul>
+
+				<font size="2"><strong><br>
+				paint.net 4.0.4 - </strong>released on November 29th, 2014<br>
+				This update greatly improves performance in some key areas, fixes some important bugs, and reintroduces a feature that was omitted in the transition from 3.5 to 4.0.</font></p>
+
+				<ul><font size="2">
+					<li><strong>New</strong>: Added a 'Fill' property to the Paintbrush tool (regression from 3.5).</li>
+					<li><strong>Faster</strong>: Move Selected Pixels has been significantly optimized.</li>
+					<li><strong>Faster</strong>: Magic Wand Tool has been significantly optimized.</li>
+					<li><strong>Faster</strong>: Working with aliased selections ("aliased selection quality" in the toolbar) has been significantly optimized.</li>
+					<li><strong>Faster</strong>: Edit-&gt;Copy and Edit-&gt;Copy Merged are now up to 2x faster.</li>
+					<li><strong>Faster</strong>: Drawing when a selection is active; clipping performance is now improved.</li>
+					<li><strong>Fixed</strong>: The Text tool no longer produces terrible looking text when using Smooth rendering mode without antialiasing.</li>
+					<li><strong>Fixed</strong>: The Gear shape had a few glitches.</li>
+					<li><strong>Fixed</strong>: Using a Fill pattern with the Paint Bucket would sometimes produces misaligned or "corrupt looking" results.</li>
+					<li><strong>Fixed</strong>: The alignment of the menu buttons in the top-right was off by 2 pixels, causing them to look weird at high-DPI.</li>
+					<li><strong>Fixed</strong>: The zoom buttons in the status
+					bar would not recognize clicks unless the main window was
+					already in focus.</li>
+					<li><strong>Fixed</strong>: Some incorrect errors about requiring Windows 7 SP1 when launching the installer from something like an old version of WinZip.</li>
+					<li><strong>Fixed</strong>: Edit-&gt;Clear Selection and
+					Edit-&gt;Cut were filling with transparent black (#00000000)
+					instead of transparent white (#00FFFFFF). This caused some
+					discrepancies compared to older versions of Paint.NET
+					(regression from 3.5).</li>
+					<li><strong>Fixed</strong>: Pressing Ctrl+A when a drawing tool was active would sometimes incorrectly show a tinted selection.</li>
+					<li><strong>Fixed</strong>: Text in the title bar was not visible when using a 3rd party Aero theme with black titlebars.</li>
+				</font></ul>
+
+
+				<font size="2"><strong><br>
+				paint.net 4.0.3 - </strong>released on July 22nd, 2014<br>
+				This update fixes a few small bugs and improves performance.</font></p>
+
+				<ul><font size="2">
+					<li>Further improved performance when working with images that have a lot of layers.</li>
+					<li>Fixed some flickering in the Layers form.</li>
+					<li>Fixed the Language selector in the Settings dialog.</li>
+					<li>Fixed 2-finger touchpad and touch screen scrolling.</li>
+					<li>Aero peek thumbnails now include the pixel grid if it's enabled.</li>
+					<li>Fixed a crash in the thumbnail renderer that sometimes happened when switching between images.</li>
+					<li>Ctrl+W no longer exits the application if zero images are open.</li>
+				</font></ul>
+
+				<font size="2"><strong><br>
+				paint.net 4.0.2 - </strong> released on July 15th, 2014<br>
+				This update fixes a few small bugs and feature regressions from 3.5.</font></p>
+
+				<ul><font size="2">
+					<li>Fixed the gamma and contrast for text rendering on some systems where the wrong values were being used ("rainbow" text)</li>
+					<li>Colors window now correctly lets you paste a hex color value that starts with a hash, e.g. #112233</li>
+					<li>Gradient tool now lets you reverse a transparency gradient by clicking the right mouse button on one of the handles (regression from 3.5)</li>
+					<li>Move Selected Pixels now lets you hold Control to leave a copy of the selected area behind on the initial move (regression from 3.5)</li>
+					<li>Paint Bucket tool's hatch fill modes weren't working with the Overwrite blending mode (regression from 3.5)</li>
+					<li>Fixed a keyboard tabbing issue in the Resize dialog (regression from 3.5)</li>
+					<li>Fixed the language setting in the Settings dialog not always allowing you to set it to English if your system's default language is non-English</li>
+					<li>Fixed a performance issue that caused images with many layers (50+) to take a VERY long time to open, close, or even switch away from (regression from 3.5)</li>
+					<li>Fixed a rare crash at application exit</li>
+					<li>Fixed an issue that prevented the 4.0.1 from installing on top of 4.0 when using the MSI (e.g. AD/GPO network deployment)</li>
+					<li>Fixed an issue that would sometimes cause the installer to take 30+ seconds to appear</li>
+				</font></ul>
+
+				<font size="2"><strong><br>
+				paint.net 4.0.1</strong> - released on July 12th, 2014<br>
+				This update is focused on fixing some important crashes, bricks,
+				and functionality issues, and also on a few key performance
+				optimizations.</font></p>
+
+				<ul><font size="2">
+					<li>Move Selected Pixels tool performance has been
+					significantly optimized.</li>
+					<li>Move Selected Pixels tool was always leaving transparent
+					black behind instead of the secondary color with alpha
+					removed.</li>
+					<li>Brush tools with odd-sized brushes and no antialiasing
+					were drawing at 1 size smaller.</li>
+					<li>Fixed some apparent ‘lag’ in the brush tools due to an
+					off-by-1 glitch in the stroke path calculation code.</li>
+					<li>The brush tool preview circle no longer scales by the
+					system DPI setting, which made it too big.</li>
+					<li>Removed the momentary hourglass/wait cursor after
+					drawing (e.g. pencil and brush tools).</li>
+					<li>Optimized performance of the Shapes tool, especially for
+					the Ellipse shape.</li>
+					<li>Paint Bucket tool will now correctly treat the selection
+					as a boundary contour.</li>
+					<li>Zoom tool no longer crashes sometimes when pressing the
+					right mouse button while already holding the left mouse
+					button.</li>
+					<li>The status bar now reports the correct selection
+					location when it’s outside the image boundaries (e.g.
+					negative values).</li>
+					<li>Auto-scrolling on the edge of the window now works
+					correctly and doesn’t require you to "jiggle the mouse" for
+					each scroll update.</li>
+					<li>Touch screens no longer scroll when swiping up/down with
+					one finger.</li>
+					<li>Improved the pixel grid’s contrast so it’s not
+					overwhelmingly bright.</li>
+					<li>The transparency "checkerboard" is now aligned to the
+					top-left of the image, instead of the top-left of the
+					canvas.</li>
+					<li>The cursor position reported in the status bar was
+					off-by-1 when the value was supposed to be negative.</li>
+					<li>Some controls (e.g. units selection in the Image-&gt;Resize
+					dialog) were not drawing focus rectangles when using the
+					keyboard.</li>
+					<li>Fixed a crash (OutOfMemoryException) when using a
+					selection tool when hardware acceleration is disabled.</li>
+					<li>Fixed a crash (TimeBeforeLastUpdateException) in the
+					installer. This usually happens when running in a virtual
+					machine, and only affects animations.</li>
+					<li>Fixed a crash (BadImageFormatException) at startup. This
+					indicates an installation error, and will be automatically
+					repaired.</li>
+					<li>Fixed various crashes caused by having the wrong (old)
+					version of PaintDotNet.SystemLayer.Native.dll. This
+					indicates an installation error, and will be automatically
+					repaired.</li>
+					<li>Improved performance when software rendering is used
+					(e.g. when hardware accelerated rendering is disabled).</li>
+					<li>All 7th generation Intel GPUs now default to hardware
+					rendering. All older Intel GPUs default to software
+					rendering.</li>
+					<li>Fixed graphical artifacts (blackness, flickering, mouse
+					trails) on certain GPUs (e.g. NVIDIA Optimus).</li>
+					<li>NVIDIA ION graphics cards now default to software
+					rendering due to crashes.</li>
+					<li>Fixed an issue that was causing beta updates to be
+					offered even if “Also check for pre-release (beta) versions
+					of paint.net” was disabled in Settings</li>
+				</font>
+				</ul>
+
+				<p style="text-align: left"><font size="2"><strong>paint.net 4.0 - </strong>released on
+				June 24th, 2014<br>
+				This release improves performance and memory usage with a new
+				rendering engine optimized for multicore CPUs and hardware
+				acceleration (GPU). Most tools now support "fine grained
+				history" and live adjustment of their properties, including the
+				Magic Wand and Paint Bucket. Selections are now antialiased,
+				which greatly improves their quality. </font></p>
+
+				<ul><font size="2">
+					<li><strong>System Requirements</li></strong>
+					<ul>
+						<li>Windows 7 SP1 or newer is now required.</li>
+						<li>.NET Framework 4.5 is now required, and will be installed if needed.</li>
+						<li>A dual-core (or more!) processor is highly recommended.</li>
+						<li>Hardware acceleration (GPU) via Direct2D is now supported.</li>
+						<ul>
+							<li>Please disable this in the Settings dialog if you experience visual artifacts.</li>
+						</ul>
+					</ul>
+					<li><strong>Performance</li></strong>
+					<ul>
+						<li>A brand new, asynchronous, fully multithreaded rendering engine allows performance to scale very well with respect to the number of CPU cores whether you have 2, 4, 6, or even 16 of them.</li>
+						<li>The responsiveness of the user interface has been greatly improved, especially when working with large images.</li>
+						<li>Memory usage is lower.</li>
+						<li>Improved battery life impact due to fixing the way the floating windows manage their transparency.</li>
+						<li>Startup performance when many plugins are installed is improved, thanks to the
+						<a href="http://blogs.msdn.com/b/dotnet/archive/2012/10/18/an-easy-solution-for-improving-app-launch-performance.aspx">Multicore JIT feature introduced in .NET 4.5</a>.</li>
+					</ul>
+					<li><strong>Selections</li></strong>
+					<ul>
+						<li>Selections are now antialiased, which greatly improves the quality around the edges of selected content. You can turn this on and off at any time from the toolbar.</li>
+						<li>Everything related to selections now has much higher performance and greatly reduced CPU usage, especially if hardware acceleration (GPU) is enabled.</li>
+						<li>The selection outline is now rendered using the "dancing ants" animation, which greatly improves the contrast between it and the image itself.</li>
+					</ul>
+					<li><strong>General</li></strong>
+					<ul>
+						<li>The functionality previously provided by the Utilities, Window, and Help menus has been simplified, consolidated, and moved to the top-right corner of the main window.<br>
+							<img src="images/pdn4_topright.png" /></li>
+						<li>The image thumbnail list has been moved up 1 row so that it no longer intrudes into the current Tool's toolbar space. This means it will no longer "jump around" when you switch between tools. This also means that it is aligned to the top of the monitor when the main window is maximized, making it easier to click on images
+						<a href="http://en.wikipedia.org/wiki/Fitts's_law">(Fitt's law)</a>.</li>
+						<li>The image thumbnail list can now be reordered with drag-and-drop.</li>
+						<li>A brand new Settings dialog makes it much easier to configure all the tool and toolbar defaults, among other things.</li>
+						<li>The zoom slider and units selector have been moved from the toolbar to the bottom right corner of the window (into the status bar).</li>
+						<li>Each image now shows up as its own taskbar item. This can be disabled in the Settings dialog with "Show image previews in the Windows taskbar."</li>
+						<li>Layers can now be reordered with drag-and-drop.</li>
+						<li>Ctrl+Click on the Move Layer Up/Down buttons will now move a layer to the top/bottom, respectively.</li>
+						<li>Improved quality of Image -&gt; Resize.</li>
+						<li>Edit -&gt; Copy Merged will copy all layers to the clipboard without having to use Image
+						-&gt; Flatten first.</li>
+						<li>Copying to the clipboard now includes the "PNG" format, which allows transparency to survive from many popular applications (e.g. Office)</li>
+						<li>You can now use the middle mouse button to scroll/pan the image at any time (same functionality as holding down the spacebar along with clicking and dragging the mouse).</li>
+						<li>Shift+Backspace will now fill the selection with the
+						secondary color (Backspace, the shortcut key for Edit -&gt; Fill Selection, still fills with primary color as usual).</li>
+						<li>paint.net now shows up in Windows' “Default Programs” control panel so you can configure its file type associations without reinstalling.</li>
+						<li>EXIF rotation metadata is now applied when opening images (e.g. JPG taken with a rotated camera).</li>
+						<li>Eleven (11) <strong>new languages</strong>, bringing the total to 21: Chinese (Simplified),
+						<strong>Chinese (Traditional)</strong>, <strong>Czech</strong>,
+						<strong>Danish</strong>, <strong>Dutch</strong>, English,
+						<strong>Finnish</strong>, French, German, <strong>Hindi</strong>,
+						<strong>Hungarian</strong>, Italian, Japanese, Korean,
+						<strong>Lithuanian</strong>, <strong>Persian</strong>,
+						<strong>Polish</strong>, Portuguese (Brazilian), <strong>Portuguese (Portugal)</strong>, Russian, and Spanish.</li>
+						<li>Crash logs are now stored in <strong>%LOCALAPPDATA%\paint.net\CrashLogs</strong> (e.g. C:\Users\<em>username</em>\AppData\Local\paint.net\CrashLogs) instead of on the desktop.</li>
+					</ul>
+					<li><strong>Effects</li></strong>
+					<ul>
+						<li>New effect: Photo -&gt; Vignette.</li>
+						<li>Improved the quality of the Photo -&gt; Red Eye Removal effect.</li>
+						<li>Improved UI for Layers -&gt; Rotate/Zoom.</li>
+						<li>Effect plugins now show up with a jigsaw puzzle icon next to them in the menus. You can hover over the effect to see information about it, including the author and location of its DLL.</li>
+						<li>Errors while loading effect plugins are now displayed in the Settings dialog.</li>
+					</ul>
+					<li><strong>Tools</li></strong>
+					<ul>
+						<li>Most Tools now support "fine-grained history." You may adjust the properties of what you've drawn (e.g. colors, toolbar settings) before committing to the layer (use the "Finish" button or press Enter), and each change is tracked in the history.</li>
+						<li>Tools may now draw directly with a blending mode, configurable from the toolbar. All of the layer blending modes are supported, as well as “Overwrite.”<br><img src="images/pdn4_toolblending.png" /></li>
+						<li>Drawing tools (Pencil, Paintbrush, Eraser, Clone Stamp, Recolor) now have much smoother mouse input handling via
+						<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms646259(v=vs.85).aspx">GetMouseMovePointsEx</a>.</li>
+						<li>Brush tools (Paintbrush, Eraser, Clone Stamp, Recolor) now have soft brushes support via a “Hardness” setting in the toolbar.</li>
+						<li>The Move tools (Move Selected Pixels, Move Selection) have a much better UI for scaling, moving, and (especially) rotation.</li>
+						<li>The Move tools now support moving the rotation anchor, which changes the center of rotation.</li>
+						<li>The new Shapes tool replaces the Rectangle, Rounded Rectangle, Ellipse, and Freeform shape tools. 27 shapes are currently available. You may move, resize, and rotate a shape, as well as reconfigure any other properties from the toolbar (color, outline size, etc.) before committing it to the layer.</li>
+						<li>Color Picker has a configurable sampling radius, and can sample from either the current layer or the whole image.</li>
+						<li>Gradient tool now supports a new Spiral gradient type and allows configuration of the repeat mode (none, repeat, wrapped).</li>
+						<li>Gradient tool has improved rendering quality via dithering and antialiasing. You can control both of these with the standard antialiasing toggle in the toolbar.</li>
+						<li>Magic Wand and Paint Bucket now allow live adjustment of Tolerance and the Origin (click location) after clicking (press Enter to commit/finish).</li>
+						<li>Magic Wand and Paint Bucket can now sample from either the current layer or the whole image.</li>
+						<li>Paint Bucket tool now supports anti-aliasing.</li>
+						<li>Recolor tool can now use the color of the pixel where you click as the color to be replaced. Or, as usual, it can use the secondary color.</li>
+						<li>Text tool now supports multiple rendering modes: Smooth, Sharp (Modern), and Sharp (Classic). These correspond to DirectWrite rendering modes of Outline, ClearType Natural Symmetric, and GDI Classic, respectively.</li>
+						<li>Text tool now supports colored fonts on Windows 8.1.</li>
+				</font></ul>
+
+				<a name="v3_5"></a>
+
+				<p><font size="2"><b>Paint.NET v3.5.11</b> -
+				released on August 17th,
+				2013<br>The primary goal of this update is preparing for the v4.0 release: previous versions of Paint.NET will <em>not</em> be able to offer the v4.0 update.
+				Also included are some small fixes and performance improvements that have been ported over from the v4.0 codebase.</font>
+
+				<ul><font size="2">
+				    <li>Fixed: The Gaussian Blur effect was incorrectly calculating alpha values for non-opaque pixels.</li>
+				    <li>Improved performance of the Sharpen effect by about 25%</li>
+				    <li>Improved performance of the Median effect by about 30%</li>
+				    <li>Improved performance of the Fragment effect by about 40%</li>
+				    <li>Improved performance of the Unfocus effect by about 100%</li>
+				    <li>Reduced memory usage when many selection manipulation operations are in the history/undo stack (the undo data is now saved to disk)</li>
+				    <li>The built-in updater now supports upgrading to paint.net 4.0 (when it's available)</li>
+				</ul>
+
+				<p><font size="2"><b>Paint.NET v3.5.10 </b>-
+				released on October 9th,
+				2011<br>This update fixes some broken shortcut keys for the View -&gt; Actual Size command.</font>
+
+				<ul><font size="2">
+					<li>Fixed: Ctrl+Shift+A now works again as a shortcut for
 					View -&gt; Actual Size (broken in 3.5.9)</li>
-					<li>Fixed: Ctrl+0 still works for View -&gt; Actual Size even 
-					if 10 or more images are open (broken in 3.5.9, it would 
+					<li>Fixed: Ctrl+0 still works for View -&gt; Actual Size even
+					if 10 or more images are open (broken in 3.5.9, it would
 					switch to the 10th image).</li>
 				</ul>
-				
-				
-				<p><font size="2"><b>Paint.NET v3.5.9 </b>- 
-				released on October 1st, 
-				2011<br>This update improves the "Auto-Detect" bit-depth 
+
+
+				<p><font size="2"><b>Paint.NET v3.5.9 </b>-
+				released on October 1st,
+				2011<br>This update improves the "Auto-Detect" bit-depth
 				feature, and fixes a few small issues.</font>
-				
+
 				<ul><font size="2">
-					<li>Improved: The "Auto-detect" bit-depth setting for PNG, 
-					BMP, and TGA now also determines which bit-depth to use 
-					based on which one produces the smallest file size, as well 
+					<li>Improved: The "Auto-detect" bit-depth setting for PNG,
+					BMP, and TGA now also determines which bit-depth to use
+					based on which one produces the smallest file size, as well
 					as which ones can save the image without losing fidelity.</li>
-					<li>Improved: You can now use Ctrl+0 as a shortcut key for 
-					View -&gt; Actual Size, in addition to Ctrl+Shift+A and 
+					<li>Improved: You can now use Ctrl+0 as a shortcut key for
+					View -&gt; Actual Size, in addition to Ctrl+Shift+A and
 					Ctrl+Alt+0.</li>
-					<li>Fixed: Some text in the DirectDraw Surface (DDS) Save 
+					<li>Fixed: Some text in the DirectDraw Surface (DDS) Save
 					Configuration UI was not being loaded.</li>
-					<li>Fixed: Some DirectDraw Surface (DDS) files authored with 
+					<li>Fixed: Some DirectDraw Surface (DDS) files authored with
 					other software (e.g. Unreal 2004) could not be loaded.</li>
-					<li>Fixed: In some rare circumstances, clicking on the Save 
+					<li>Fixed: In some rare circumstances, clicking on the Save
 					button in the toolbar would crash.</li>
-					<li>Fixed: The Korean translation has been added back in, with the 
-					help of Bing machine translation to cover the few remaining 
+					<li>Fixed: The Korean translation has been added back in, with the
+					help of Bing machine translation to cover the few remaining
 					strings that were untranslated.</li>
 				</ul>
-				
-				<p><font size="2"><b>Paint.NET v3.5.8 </b>- 
-				released 
-				on March 5th, 2011<br>This update fixes some issues with the 
+
+				<p><font size="2"><b>Paint.NET v3.5.8 </b>-
+				released
+				on March 5th, 2011<br>This update fixes some issues with the
 				fault-tolerant save feature introduced in 3.5.7.</font>
-				
+
 				<ul><font size="2">
-					<li>Fixed: Saving to a folder that has been moved or renamed 
-					will display an error instead of crashing (regression from 
+					<li>Fixed: Saving to a folder that has been moved or renamed
+					will display an error instead of crashing (regression from
 					3.5.6)</li>
-					<li>Fixed: Saving to a Sharepoint site will now work 
+					<li>Fixed: Saving to a Sharepoint site will now work
 					(regression from 3.5.6)</li>
-					<li>Fixed: Saving to a file that is marked as read only will 
-					now give an error instead of crashing (regression from 
+					<li>Fixed: Saving to a file that is marked as read only will
+					now give an error instead of crashing (regression from
 					3.5.6)</li>
-					<li>Fixed: General reliability and correctness improvements 
+					<li>Fixed: General reliability and correctness improvements
 					to fault-tolerant saving</li>
 				</ul>
-				
-				<p><font size="2"><b>Paint.NET v3.5.7 </b>- 
-				released 
-				on February 20th, 2011<br>This update improves reliability of saving, further improves Copy/Paste functionality, and fixes some other miscellaneous bugs.</font>				
+
+				<p><font size="2"><b>Paint.NET v3.5.7 </b>-
+				released
+				on February 20th, 2011<br>This update improves reliability of saving, further improves Copy/Paste functionality, and fixes some other miscellaneous bugs.</font>
 				<ul><font size="2">
-					<li>Saving an image is now fault-tolerant. If there is an 
-					error or crash while saving, the original file will be left 
+					<li>Saving an image is now fault-tolerant. If there is an
+					error or crash while saving, the original file will be left
 					alone.</li>
-					<li>Worked around a bug in some plugins that are incorrectly 
-					using the built-in Gaussian Blur effect. For example, 
+					<li>Worked around a bug in some plugins that are incorrectly
+					using the built-in Gaussian Blur effect. For example,
 					Sharpen+. Now they won&#39;t crash.</li>
-					<li>Fixed a bug with Edit-&gt;Paste into New Image, where the 
+					<li>Fixed a bug with Edit-&gt;Paste into New Image, where the
 					new image would be 1 pixel too wide or tall, as reported at
 					<a href="http://forums.getpaint.net/index.php?/topic/20969-paste-problem/">
 					http://forums.getpaint.net/index.php?/topic/20969-paste-problem/</a> </li>
-					<li>Fixed a bug with the Rectangle Select tool and Fixed 
-					Ratio selection, which would be off by 1 pixel, as reported 
+					<li>Fixed a bug with the Rectangle Select tool and Fixed
+					Ratio selection, which would be off by 1 pixel, as reported
 					at
 					<a href="http://forums.getpaint.net/index.php?/topic/20820-croppig-by-fixed-ratio-is-inexact">
 					http://forums.getpaint.net/index.php?/topic/20820-croppig-by-fixed-ratio-is-inexact</a> </li>
-					<li>When pasting an image from Paint.NET into Paint.NET, it 
-					will be a little smarter about where it puts the image. 
-					Previously, if the location wasn&#39;t within the viewport, it 
-					would be placed at the top-left corner of the viewport. Now 
-					it will find the nearest point along the edge of the 
+					<li>When pasting an image from Paint.NET into Paint.NET, it
+					will be a little smarter about where it puts the image.
+					Previously, if the location wasn&#39;t within the viewport, it
+					would be placed at the top-left corner of the viewport. Now
+					it will find the nearest point along the edge of the
 					viewport to place the image.</li>
-					<li>The EXIF rotation (&quot;orientation&quot;) metadata is now 
-					discarded when opening an image, which was causing 
-					aggravation with images that could then never be reoriented 
+					<li>The EXIF rotation (&quot;orientation&quot;) metadata is now
+					discarded when opening an image, which was causing
+					aggravation with images that could then never be reoriented
 					correctly using Image-&gt;Rotate</li>
-					<li>The EXIF metadata for JPEG thumbnail data are now 
+					<li>The EXIF metadata for JPEG thumbnail data are now
 					correctly discarded. </li>
 					<li>Fixed a handful of memory leaks.</li>
-					<li>Fixed a typo in the Italian translation. In the setup 
+					<li>Fixed a typo in the Italian translation. In the setup
 					wizard it was referring to &quot;Pain.NET&quot; (woops)</li>
 				</ul>
-				
-				<p><font size="2"><b>Paint.NET v3.5.6 -</b> released 
-				on November 18th, 2010<br>This update fixes several issues 
-				related to copy-paste, improves performance and quality for a 
+
+				<p><font size="2"><b>Paint.NET v3.5.6 -</b> released
+				on November 18th, 2010<br>This update fixes several issues
+				related to copy-paste, improves performance and quality for a
 				few adjustments, and fixes a data loss bug.</font>
-				
+
 				<ul><font size="2">
 					<li><font size="2">
-					When pasting an image, Paint.NET will be smarter 
-					about ensuring it is placed within the area that has been 
+					When pasting an image, Paint.NET will be smarter
+					about ensuring it is placed within the area that has been
 					scrolled/zoomed to.</font></li>
-					<li>Improved the performance and quality of the Curves and 
+					<li>Improved the performance and quality of the Curves and
 					Hue/Saturation adjustments.</li>
 					<li><font size="2">
-					Some minor improvements to memory usage, which 
+					Some minor improvements to memory usage, which
 					should help out a few scenarios on 32-bit systems.</font></li>
-					<li>Fixed: If a JPEG was loaded that had an embedded ICC 
-					profile, and was then saved as an 8-bit or 24-bit PNG, then 
-					the resulting file would be corrupt (32-bit PNG worked fine 
+					<li>Fixed: If a JPEG was loaded that had an embedded ICC
+					profile, and was then saved as an 8-bit or 24-bit PNG, then
+					the resulting file would be corrupt (32-bit PNG worked fine
 					though).</li>
-					<li>Fixed: 16-bit TGAs no longer load with the red and blue 
+					<li>Fixed: 16-bit TGAs no longer load with the red and blue
 					channels swapped.</li>
-					<li>Fixed: Copy-paste from a Remote Desktop session will no 
+					<li>Fixed: Copy-paste from a Remote Desktop session will no
 					longer be &#39;shifted&#39; by 3 pixels.</li>
-					<li>Fixed: Copy-paste from Internet Explorer, Firefox, or 
+					<li>Fixed: Copy-paste from Internet Explorer, Firefox, or
 					Chrome should preserve alpha/transparency.</li>
-					<li>Fixed: Copying from Paint.NET and pasting into Windows 
+					<li>Fixed: Copying from Paint.NET and pasting into Windows
 					Live Writer should now work.</li>
-					<li>Fixed: Taking a full-screen screenshot with Print Screen 
-					on a multimonitor system, where those monitors don&#39;t form a 
-					simple rectangle, will now fill the &#39;gap area&#39; with 
-					transparent instead of black. (Example: two monitors of the 
+					<li>Fixed: Taking a full-screen screenshot with Print Screen
+					on a multimonitor system, where those monitors don&#39;t form a
+					simple rectangle, will now fill the &#39;gap area&#39; with
+					transparent instead of black. (Example: two monitors of the
 					same size, one of which is rotated by 90 degrees)</li>
-					<li>Fixed: If Paint.NET is opened without specifying an 
-					image to open, and then the default image is modified and 
-					saved, then Paint.NET will no longer close it upon 
-					opening another one. This was causing data loss if that 
-					default image had layers, and was then saved in a format 
+					<li>Fixed: If Paint.NET is opened without specifying an
+					image to open, and then the default image is modified and
+					saved, then Paint.NET will no longer close it upon
+					opening another one. This was causing data loss if that
+					default image had layers, and was then saved in a format
 					that did not support layers (anything other than .PDN).</li>
-					<li>Fixed: Some systems were showing &#39;red X&#39; thumbnails for 
-					.PDN files in Windows Explorer, instead of the real 
+					<li>Fixed: Some systems were showing &#39;red X&#39; thumbnails for
+					.PDN files in Windows Explorer, instead of the real
 					thumbnail.</li>
-					<li>Fixed: The EXIF &quot;Creation Software&quot; saved along with 
-					images is no longer localized. This prevents certain 
-					languages from seeing &quot;Paint.NET ????? v3.5.6&quot; in the image 
+					<li>Fixed: The EXIF &quot;Creation Software&quot; saved along with
+					images is no longer localized. This prevents certain
+					languages from seeing &quot;Paint.NET ????? v3.5.6&quot; in the image
 					properties (metadata).</li>
 				</ul>
-				
-				<p><font size="2"><b>Paint.NET v3.5.5 </b>- 
-				released 
-				on April 25th, 2010<br>This update fixes a bug when saving 8-bit images, improves 
-				layer composition and Gaussian Blur performance, and is now updated 
+
+				<p><font size="2"><b>Paint.NET v3.5.5 </b>-
+				released
+				on April 25th, 2010<br>This update fixes a bug when saving 8-bit images, improves
+				layer composition and Gaussian Blur performance, and is now updated
 				to support the new .NET Framework 4.0 in some cases.</font><ul><font size="2">
 					<li><font size="2">
-					Fixed the bug where saving as 8-bit PNG/GIF/BMP wasn&#39;t 
+					Fixed the bug where saving as 8-bit PNG/GIF/BMP wasn&#39;t
 					always working, usually with larger images.</font></li>
-					<li>Improved the performance of the Gaussian Blur effect by 
+					<li>Improved the performance of the Gaussian Blur effect by
 					30-40%.</li>
-					<li>Improved the performance of all the layer blending modes 
+					<li>Improved the performance of all the layer blending modes
 					by 15-30%.</li>
-					<li>Improved the performance of zooming with the mouse wheel 
+					<li>Improved the performance of zooming with the mouse wheel
 					on dual-core Intel Atom systems.</li>
-					<li>Updated to support .NET 4.0 if no other version of .NET 
+					<li>Updated to support .NET 4.0 if no other version of .NET
 					is installed. </li>
 					<li>Reduced download size from 4.8MB down to 3.5MB.</li>
 					<li>Fixed a small error in the Chinese translation.</li>
 				</ul>
-				
-				<p><strong><font color="red">Please note that the system requirements have 
-				been updated.</font></strong> For Windows XP, you must now have 
-				Service Pack 3 (SP3) installed; SP2 is no longer 
-				supported. For Windows Vista, you must now have Service 
+
+				<p><strong><font color="red">Please note that the system requirements have
+				been updated.</font></strong> For Windows XP, you must now have
+				Service Pack 3 (SP3) installed; SP2 is no longer
+				supported. For Windows Vista, you must now have Service
 				Pack 1 installed.</p>
-				
-                <p><font size="2"><b>Paint.NET v3.5.4 </b>- 
-				released on 
-				February 25th, 2010<br>This update fixes a few small bugs, and 
+
+                <p><font size="2"><b>Paint.NET v3.5.4 </b>-
+				released on
+				February 25th, 2010<br>This update fixes a few small bugs, and
 				improves performance of the Flatten command.</font>
-				
+
 				<ul><font size="2">
-					<li>Improved performance of the Image-&gt;Flatten command by 
+					<li>Improved performance of the Image-&gt;Flatten command by
 					making it multithreaded.</li>
-					<li>Fixed the File-&gt;Save As dialog not opening to the 
+					<li>Fixed the File-&gt;Save As dialog not opening to the
 					correct folder.</li>
-					<li>Fixed a crash with certain plugins and their use of the 
+					<li>Fixed a crash with certain plugins and their use of the
 					File Open dialog.</li>
 					<li>Fixed a very rare crash with the toolbar&#39;s font list.</li>
 				</ul>
-				
+
 					</font>
-				
-				<p><font size="2"><b>Paint.NET v3.5.3</b>, released on 
+
+				<p><font size="2"><b>Paint.NET v3.5.3</b>, released on
 				February 7th, 2010<br>This update fixes a few small bugs.</font>
-				
+
 				<ul><font size="2">
-					<li>Fixed DirectDraw Surface (.dds) file format support for 
+					<li>Fixed DirectDraw Surface (.dds) file format support for
 					CPUs which do not have SSE2 (Pentium III, Athlon XP).</li>
-					<li>Fixed an issue with the File-&gt;Save dialog related to 
-					file type plugins that were only written for opening 
+					<li>Fixed an issue with the File-&gt;Save dialog related to
+					file type plugins that were only written for opening
 					(importing).</li>
-					<li>Fixed some crashes which were supposed to be &quot;out of 
+					<li>Fixed some crashes which were supposed to be &quot;out of
 					memory&quot; errors.</li>
-					<li>Fixed a race condition with the New Image, Canvas Size, 
-					and Resize dialogs. If you typed extremely fast you could 
-					cause a crash by typing a negative number and immediately 
+					<li>Fixed a race condition with the New Image, Canvas Size,
+					and Resize dialogs. If you typed extremely fast you could
+					cause a crash by typing a negative number and immediately
 					pressing OK or Enter.</li>
 					<li><font size="2">
-					Fixed a File-&gt;Save dialog issue in Win7/Vista where it could 
+					Fixed a File-&gt;Save dialog issue in Win7/Vista where it could
 					ask you about overwriting the wrong file.</font></li>
 				</ul>
-				
+
 					</font>
-				
-				<p><font size="2"><b>Paint.NET v3.5.2,</b> released on 
-				January 4th, 2010<br>This update resolves some feature 
-				disparities in the Text tool between GDI (XP) and DirectWrite 
-				(Win7/Vista). It also improves overall performance, as well as 
-				the correctness and quality of the Move Selected Pixels tool, 
+
+				<p><font size="2"><b>Paint.NET v3.5.2,</b> released on
+				January 4th, 2010<br>This update resolves some feature
+				disparities in the Text tool between GDI (XP) and DirectWrite
+				(Win7/Vista). It also improves overall performance, as well as
+				the correctness and quality of the Move Selected Pixels tool,
 				the Image-&gt;Resize function, and the Hue/Saturation adjustment.</font>
-				
+
 				<ul>
-					<li><font size="2">All font face variants (e.g., Arial vs. 
-					Arial Narrow) are now available with the Text tool in 
+					<li><font size="2">All font face variants (e.g., Arial vs.
+					Arial Narrow) are now available with the Text tool in
 					Win7/Vista with DirectWrite.</font></li>
-						<li><font size="2">Bitmap font types (e.g. Courier, 
-						Terminal, Fixedsys) are now available with the Text tool 
+						<li><font size="2">Bitmap font types (e.g. Courier,
+						Terminal, Fixedsys) are now available with the Text tool
 						in Win7/Vista.</font></li>
-						<li><font size="2">Fixed some bad text kerning with the 
-						Text tool at small font sizes when antialiasing was 
+						<li><font size="2">Fixed some bad text kerning with the
+						Text tool at small font sizes when antialiasing was
 						turned off.</font></li>
-						<li><font size="2">For the Image-&gt;Resize function, the 
-						quality, correctness, and performance of Bilinear 
-						and Bicubic sampling modes have been improved. Super 
+						<li><font size="2">For the Image-&gt;Resize function, the
+						quality, correctness, and performance of Bilinear
+						and Bicubic sampling modes have been improved. Super
 						Sampling also has some performance improvement.</font></li>
-						<li><font size="2">Improved the rendering quality for 
-						the Hue/Saturation adjustment. Also made a new icon for 
+						<li><font size="2">Improved the rendering quality for
+						the Hue/Saturation adjustment. Also made a new icon for
 						it.</font></li>
-						<li><font size="2">Fixed many subtle rendering issues 
-						with the Move Selected Pixels tool. These were apparent 
+						<li><font size="2">Fixed many subtle rendering issues
+						with the Move Selected Pixels tool. These were apparent
 						when flipping or rotating a selected area.</font></li>
-						<li><font size="2">Fixed: The Line/Curve tool was 
-						applying pixel snapping to the curve nodes, which caused 
-						lines to &quot;bend&quot; when using the Shift key to constrain 
+						<li><font size="2">Fixed: The Line/Curve tool was
+						applying pixel snapping to the curve nodes, which caused
+						lines to &quot;bend&quot; when using the Shift key to constrain
 						the angle.</font></li>
-						<li><font size="2">Fixed some extraneous CPU usage 
+						<li><font size="2">Fixed some extraneous CPU usage
 						related to unnecessary or redundant thumbnail updates.</font></li>
-						<li><font size="2">Fixed a few dialogs that looked wrong 
+						<li><font size="2">Fixed a few dialogs that looked wrong
 						with Aero glass with Remote Desktop or Virtual PC.</font></li>
-						<li><font size="2">Fixed a nasty memory leak with 
+						<li><font size="2">Fixed a nasty memory leak with
 						Flatten followed by Undo.</font></li>
-						<li><font size="2">Fixed some issues related to effects 
-						that took awhile to cancel. As it turns out, 
+						<li><font size="2">Fixed some issues related to effects
+						that took awhile to cancel. As it turns out,
 						drag-and-drop was enabled at this time, which easily lead to crashes or hangs.</font></li>
-						<li><font size="2">Some Win7 systems could not detect 
-						that .NET 3.5 SP1 was installed, even though it was. A 
+						<li><font size="2">Some Win7 systems could not detect
+						that .NET 3.5 SP1 was installed, even though it was. A
 						fallback detection function has been added.</font></li>
-						<li><font size="2">For plugin authors, the Effect class 
-						now has a pollable IsCancelRequested property. This can 
-						be used to improve responsiveness for expensive 
-						OnSetRenderInfo() implementations which are otherwise 
+						<li><font size="2">For plugin authors, the Effect class
+						now has a pollable IsCancelRequested property. This can
+						be used to improve responsiveness for expensive
+						OnSetRenderInfo() implementations which are otherwise
 						non-interruptible.</font></li>
-						<li><font size="2">For plugin authors, the 
-						Surface.FitSurface() method is now optimized to use 
-						multiple threads, which improves 
+						<li><font size="2">For plugin authors, the
+						Surface.FitSurface() method is now optimized to use
+						multiple threads, which improves
 						performance.</font></li>
 				</ul>
-				
-				<p><font size="2"><b>Paint.NET v3.5.1</b>, released on 
-				November 19th, 2009<b><br></b>This update adds a new feature for 
-				Windows 7 users, and fixes many small issues that have been 
+
+				<p><font size="2"><b>Paint.NET v3.5.1</b>, released on
+				November 19th, 2009<b><br></b>This update adds a new feature for
+				Windows 7 users, and fixes many small issues that have been
 				found since 3.5&#39;s release.</font></p>
-				
+
 				<ul>
-					<li><font size="2"><strong>New:</strong> For Windows 7, 
-					added taskbar progress reporting for long running operations 
+					<li><font size="2"><strong>New:</strong> For Windows 7,
+					added taskbar progress reporting for long running operations
 					(effects, adjustments, Image-&gt;Resize, save, install)<br>
 					<a href="images/pdn35_roadmap_refreshedUI.jpg">
 					<img border="0" src="images/pdn351_superbarProgress.png" /></a>
 					</font></li>
-					<li><font size="2">Made some corrections to the French 
+					<li><font size="2">Made some corrections to the French
 					translation</font></li>
-					<li><font size="2">Running setup with /auto will 
+					<li><font size="2">Running setup with /auto will
 					no longer launch Paint.NET when it&#39;s done</font></li>
-					<li><font size="2">Fixed an issue where Paste into 
-					New Image would refuse an image on the clipboard, even 
+					<li><font size="2">Fixed an issue where Paste into
+					New Image would refuse an image on the clipboard, even
 					if regular Paste would take it</font></li>
-					<li><font size="2">Fixed a race condition with 
-					Edit-&gt;Paste and Image-&gt;Resize whereby it would take up 
+					<li><font size="2">Fixed a race condition with
+					Edit-&gt;Paste and Image-&gt;Resize whereby it would take up
 					100% CPU and take between 1 minute to 1 hour to finish</font></li>
-					<li><font size="2">Fixed an issues with Copy/Paste 
-					where it would leave an extra line of transparent pixels 
+					<li><font size="2">Fixed an issues with Copy/Paste
+					where it would leave an extra line of transparent pixels
 					on the left, top, right, and/or bottom edges</font></li>
-					<li><font size="2">Fixed lag with the paintbrush 
+					<li><font size="2">Fixed lag with the paintbrush
 					tool that was being seen on some systems</font></li>
-					<li><font size="2">Fixed some issues with the 
-					paintbrush and eraser tool being misaligned when zoomed 
+					<li><font size="2">Fixed some issues with the
+					paintbrush and eraser tool being misaligned when zoomed
 					in</font></li>
-					<li><font size="2">Fixed a crash that would happen 
-					at (seemingly) random times, such as after drawing with 
+					<li><font size="2">Fixed a crash that would happen
+					at (seemingly) random times, such as after drawing with
 					the paintbrush tool, on some systems</font></li>
-					<li><font size="2">Fixed a minor and obscure 
+					<li><font size="2">Fixed a minor and obscure
 					rendering glitch with the Move Selected Pixels tool</font></li>
-					<li><font size="2">Fixed an issue with glass over 
+					<li><font size="2">Fixed an issue with glass over
 					Remote Desktop or Windows 7 Virtual PC</font></li>
-					<li><font size="2">Fixed a minor glitch whereby the 
-					&quot;Unsaved Changes&quot; confirmation dialog could never finish 
-					rendering the image thumbnail if one of the Move tools 
+					<li><font size="2">Fixed a minor glitch whereby the
+					&quot;Unsaved Changes&quot; confirmation dialog could never finish
+					rendering the image thumbnail if one of the Move tools
 					was active</font></li>
 				</ul>
-				
+
 				<p><font size="2"><b>Paint.NET v3.5</b>, released on November 6th, 2009<br>
 				This release focused on improving performance reliability, reducing memory usage, upgrading to the latest .NET
-				Framework version, and refreshing 
+				Framework version, and refreshing
 				the user interface for Aero and glass (Windows 7 / Vista).</font></p>
 				<ul>
-				
-					<li><font size="2"><strong>New:</strong> Refreshed user interface with new icons and visual 
-					styling. On Windows 7 and Vista, it is enhanced for Aero and 
+
+					<li><font size="2"><strong>New:</strong> Refreshed user interface with new icons and visual
+					styling. On Windows 7 and Vista, it is enhanced for Aero and
 					&quot;glass&quot;.<br>
 					<a href="images/pdn35_roadmap_refreshedUI.jpg">
 					<img border="0" src="images/pdn35_roadmap_refreshedUI_thumb.png" /></a>
 					</font></li>
 						<font size="2">
-						<li><strong>New effect:</strong> Blurs -&gt; 
-					Surface Blur, by Ed Harvey<li><strong>New effect:</strong> Distort -&gt; Dents, 
-					by Ed Harvey<li><strong>New effect:</strong> Distort -&gt; Crystalize, by Ed 
+						<li><strong>New effect:</strong> Blurs -&gt;
+					Surface Blur, by Ed Harvey<li><strong>New effect:</strong> Distort -&gt; Dents,
+					by Ed Harvey<li><strong>New effect:</strong> Distort -&gt; Crystalize, by Ed
 					Harvey<li><strong>New:</strong> Russian translation.<li>
-						Performance and memory usage have been extensively 
-						optimized throughout the entire program.<li>.NET 
-					Framework 3.5 SP1 is now required, which has many built-in 
+						Performance and memory usage have been extensively
+						optimized throughout the entire program.<li>.NET
+					Framework 3.5 SP1 is now required, which has many built-in
 					performance improvements.</font><li class="style1">
-					<font size="2">Disk space usage has been reduced by 
-					about 12MB by using NTFS compression on installation files 
+					<font size="2">Disk space usage has been reduced by
+					about 12MB by using NTFS compression on installation files
 					related to staging (.MSI) and diagnostics (.PDB).</font></li>
-					<li class="style1"><font size="2">Compression for .PDN 
-					images has been improved.<li>Effect dialog responsiveness has been improved.<li>Images open much faster, especially on 
-					single CPU systems.<li>Startup 
-					performance on most systems will be better by about 20%.<li>Memory 
-					usage has been reduced when more than one image is 
-					open.<li>Rendering 
-					quality has been greatly improved when zoomed in.<li>The selection 
-						outline is no longer animated. Instead of &quot;dancing 
-						ants&quot;, a context-sensitive &quot;XOR&quot; stipple pattern is 
-						drawn. This has allowed for improved performance and 
-					lowered CPU consumption (and longer battery life).<li>The font 
-					manager for the Text tool has been 
-					completely rewritten, which fixes many problems seen with 
-					crashes and missing fonts.<li>On Windows XP, the Text tool has improved 
-					reliability and font selection (it 
-					uses GDI instead of GDI+).<li>On Windows 7, the Text 
-					tool will use DirectWrite (instead of GDI) which gives better performance and 
-					greatly improved quality. On Windows Vista, you may 
-						install DirectX 11 to enable this feature; otherwise GDI 
-						will be used.<li>The toolbar font 
-					list has improved usability, rendering quality, and 
-					significantly improved performance.<li>The toolbar 
-					font list no longer requires an application restart to 
-					recognize newly installed fonts.<li>When many fonts are 
-						installed, both memory usage and startup performance 
-						have been greatly improved.<li>It is now drastically easier to move a very small 
-					selection.<li><font size="2">All installation 
-					prerequisites are now installed automatically, such as .NET 
-					and Windows Installer.<li>Updates are now downloaded in the 
-					background, and installed after you exit the 
-					application. In previous versions, this was a foreground 
-					task and you could not use Paint.NET while the update was 
-					downloaded.</font><li>Added a 
-					&quot;Utilities&quot; menu. Updates, Languages, and Plugin Errors have 
-					been moved there.<li>Added a &quot;Manage Fonts&quot; command to 
-					the Utilities menu. This will launch the built-in Windows 
-					font control panel.<li>Clicking the middle mouse 
-					button on an image thumbnail will now close the image.<li>Improved 
-					the Unfocus effect.<li>The DirectDraw Surface (.DDS) 
-					file type now allows you to select the resampling algorithm 
-					for auto-generated mip-maps.<li>A processor that 
-					supports SSE is now required (almost all CPUs purchased this 
-					decade satisfy this).<li>Fixed an issue with Gaussian 
-					Blur and its treatment of alpha values.<li>Fixed a 
-					crash with the &quot;Units&quot; selector in the toolbar.<li>Fixed a crash due to an overflow that 
+					<li class="style1"><font size="2">Compression for .PDN
+					images has been improved.<li>Effect dialog responsiveness has been improved.<li>Images open much faster, especially on
+					single CPU systems.<li>Startup
+					performance on most systems will be better by about 20%.<li>Memory
+					usage has been reduced when more than one image is
+					open.<li>Rendering
+					quality has been greatly improved when zoomed in.<li>The selection
+						outline is no longer animated. Instead of &quot;dancing
+						ants&quot;, a context-sensitive &quot;XOR&quot; stipple pattern is
+						drawn. This has allowed for improved performance and
+					lowered CPU consumption (and longer battery life).<li>The font
+					manager for the Text tool has been
+					completely rewritten, which fixes many problems seen with
+					crashes and missing fonts.<li>On Windows XP, the Text tool has improved
+					reliability and font selection (it
+					uses GDI instead of GDI+).<li>On Windows 7, the Text
+					tool will use DirectWrite (instead of GDI) which gives better performance and
+					greatly improved quality. On Windows Vista, you may
+						install DirectX 11 to enable this feature; otherwise GDI
+						will be used.<li>The toolbar font
+					list has improved usability, rendering quality, and
+					significantly improved performance.<li>The toolbar
+					font list no longer requires an application restart to
+					recognize newly installed fonts.<li>When many fonts are
+						installed, both memory usage and startup performance
+						have been greatly improved.<li>It is now drastically easier to move a very small
+					selection.<li><font size="2">All installation
+					prerequisites are now installed automatically, such as .NET
+					and Windows Installer.<li>Updates are now downloaded in the
+					background, and installed after you exit the
+					application. In previous versions, this was a foreground
+					task and you could not use Paint.NET while the update was
+					downloaded.</font><li>Added a
+					&quot;Utilities&quot; menu. Updates, Languages, and Plugin Errors have
+					been moved there.<li>Added a &quot;Manage Fonts&quot; command to
+					the Utilities menu. This will launch the built-in Windows
+					font control panel.<li>Clicking the middle mouse
+					button on an image thumbnail will now close the image.<li>Improved
+					the Unfocus effect.<li>The DirectDraw Surface (.DDS)
+					file type now allows you to select the resampling algorithm
+					for auto-generated mip-maps.<li>A processor that
+					supports SSE is now required (almost all CPUs purchased this
+					decade satisfy this).<li>Fixed an issue with Gaussian
+					Blur and its treatment of alpha values.<li>Fixed a
+					crash with the &quot;Units&quot; selector in the toolbar.<li>Fixed a crash due to an overflow that
 					prevented very large images from working (64-bit only).</li>
 					<li>Fixed many other miscellaneous glitches and crashes.</li>
-						<li>The Korean translation has been removed. 
-					Sadly, we were unable to find the resources to complete 
+						<li>The Korean translation has been removed.
+					Sadly, we were unable to find the resources to complete
 					this.</li>
 					</font>
 				</ul>
-				
+
 				<p><font size="2"><b>Paint.NET v3.36 </b>Released:<strong> </strong>
-				August 26th, 2008 - 
+				August 26th, 2008 -
 				<a href="download.html#download">Download</a><br>
-				This is mostly a servicing release to make some small 
+				This is mostly a servicing release to make some small
 				improvements and to fix a few important bugs.<ul>
 					<font size="2">
-					<li><strong>Improved: </strong>Effect rendering should be a 
+					<li><strong>Improved: </strong>Effect rendering should be a
 					little faster now.</li>
 					</font>
-					<li><strong>Changed:</strong> Implemented some changes to 
-					the &quot;Add Noise&quot; effect that were suggested by a forum 
+					<li><strong>Changed:</strong> Implemented some changes to
+					the &quot;Add Noise&quot; effect that were suggested by a forum
 					member.</li>
 					<li><strong>Changed:</strong>
 					The canvas background color is now always #c0c0c0.</li>
-					<li><strong>Changed:</strong> The auto-updater should now 
-					correctly detect .NET 3.5 and newer, which will help to save 
-					bandwidth when Paint.NET v4.0 is released (it will require 
+					<li><strong>Changed:</strong> The auto-updater should now
+					correctly detect .NET 3.5 and newer, which will help to save
+					bandwidth when Paint.NET v4.0 is released (it will require
 					.NET 3.5).</li>
 					<font size="2">
-					<li><strong>Fixed:</strong> Paint.NET now works on a system 
+					<li><strong>Fixed:</strong> Paint.NET now works on a system
 					that has the .NET 3.5 SP1 &quot;Client Profile&quot; installed.</li>
-					<li><strong>Fixed:</strong> When zoomed in and the 
-					cursor is to the top-left of the image (negative 
-					coordinates), the ruler is now highlighted in the correct 
+					<li><strong>Fixed:</strong> When zoomed in and the
+					cursor is to the top-left of the image (negative
+					coordinates), the ruler is now highlighted in the correct
 					area.</li>
-					<li><strong>Fixed:</strong> The effect rendering system no 
+					<li><strong>Fixed:</strong> The effect rendering system no
 					longer sets the &quot;Tag&quot; property on the configuration dialog.</li>
-					<li><strong>Fixed:</strong> Some incorrectly authored 
-					plugins would cause a crash when loading their support 
+					<li><strong>Fixed:</strong> Some incorrectly authored
+					plugins would cause a crash when loading their support
 					details (author, copyright, etc.).</li>
-					<li><strong>Fixed:</strong> There was a bug in the color 
-					wheel for IndirectUI that caused it to show the wrong values 
+					<li><strong>Fixed:</strong> There was a bug in the color
+					wheel for IndirectUI that caused it to show the wrong values
 					at initialization.</li>
-					<li><strong>Fixed:</strong> There was a performance problem 
+					<li><strong>Fixed:</strong> There was a performance problem
 					for effects that used the IndirectUI color wheel control.</li>
-					<li><strong>Fixed:</strong> In some rare cases, Paint.NET 
+					<li><strong>Fixed:</strong> In some rare cases, Paint.NET
 					would crash while shutting down.</li>
-					<li><strong>Fixed:</strong> When using the &quot;Fixed Ratio&quot; 
-					feature of the Rectangle Selection tool, it would crash if 0 
+					<li><strong>Fixed:</strong> When using the &quot;Fixed Ratio&quot;
+					feature of the Rectangle Selection tool, it would crash if 0
 					was specified for both the width and height.</li>
-				</font></ul>	
-				
+				</font></ul>
+
 				<p><font size="2"><b>Paint.NET v3.35 </b>Released<strong>: </strong>
 				July 7th, 2008<br>
-				This releases introduces a new Posterize adjustment, a new 
-				Intersect selection mode, <em>dramatically</em> improved 
+				This releases introduces a new Posterize adjustment, a new
+				Intersect selection mode, <em>dramatically</em> improved
 				performance for selection editing, and several small bug fixes.</font><font size="2"><ul>
 					<font size="2">
 					<li><strong>New:</strong>
 					Posterize adjustment, by Ed Harvey.</li>
 					<li><strong>New:</strong> Intersect selection editing mode.</li>
 					<li><font size="2">
-					<strong>Improved:</strong> Dramatically improved 
-					selection editing performance for the Add and Subtract modes 
-					(and also for Intersect). The performance used to be 
-					dependent on image size, and thus was often unusable on 
-					images larger than 1024x768 pixels. It is now dependent only 
-					on selection complexity (number of polygon edges) -- the 
+					<strong>Improved:</strong> Dramatically improved
+					selection editing performance for the Add and Subtract modes
+					(and also for Intersect). The performance used to be
+					dependent on image size, and thus was often unusable on
+					images larger than 1024x768 pixels. It is now dependent only
+					on selection complexity (number of polygon edges) -- the
 					improvement is generally between 3x and 1000x.</font></li>
-					<li><strong>New:</strong> When holding Ctrl or Alt for a 
-					selection tool, the cursor now has a plus or minus 
+					<li><strong>New:</strong> When holding Ctrl or Alt for a
+					selection tool, the cursor now has a plus or minus
 					indicator.</li>
 					</font>
-					<li><strong>Changed:</strong> The canvas background is now a 
-					solid color instead of a gradient. The gradient was causing 
-					certain tone misjudgments related to bright versus dark 
+					<li><strong>Changed:</strong> The canvas background is now a
+					solid color instead of a gradient. The gradient was causing
+					certain tone misjudgments related to bright versus dark
 					colors.</li>
-					<li><strong>Changed:</strong> Shortcut key for Sepia is now Ctrl+Shift+E. The 
+					<li><strong>Changed:</strong> Shortcut key for Sepia is now Ctrl+Shift+E. The
 					shortcut for Posterize is now Ctrl+Shift+P.</li>
 					<font size="2">
-					<li><strong>Changed:</strong> Hotkeys for selection modes 
-					are now Left click for Replace, Control+Left click for Add 
-					(union), Alt+Left click for Subtract (difference), Ctrl+Left 
+					<li><strong>Changed:</strong> Hotkeys for selection modes
+					are now Left click for Replace, Control+Left click for Add
+					(union), Alt+Left click for Subtract (difference), Ctrl+Left
 					click for Intersect, and Ctrl+Right click for Invert (xor).</li>
 					</font>
 
-					<li><font size="2"><strong>Changed</strong>: When using a selection mode 
-					other than &quot;replace&quot;, it will now draw the selection outline 
-					so that you can see both the original and resulting 
-					selection areas. Before, it would only draw the resulting 
-					selection area outline, which made modes such as Intersect 
+					<li><font size="2"><strong>Changed</strong>: When using a selection mode
+					other than &quot;replace&quot;, it will now draw the selection outline
+					so that you can see both the original and resulting
+					selection areas. Before, it would only draw the resulting
+					selection area outline, which made modes such as Intersect
 					hard to use.</font></li>
 					<font size="2">
-					<li><strong>Fixed: </strong>The Resize dialog had some 
-					rounding errors with the &quot;Maintain aspect ratio&quot; feature, 
-					which caused a few discrepancies and even a spurious &quot;out of 
+					<li><strong>Fixed: </strong>The Resize dialog had some
+					rounding errors with the &quot;Maintain aspect ratio&quot; feature,
+					which caused a few discrepancies and even a spurious &quot;out of
 					memory&quot; error.</li>
-					<li><strong>Fixed:</strong> Some quirks with the Color Wheel 
+					<li><strong>Fixed:</strong> Some quirks with the Color Wheel
 					control for IndirectUI-based effect plugins.</li>
-					<li><strong>Fixed:</strong> Several miscellaneous and rare 
+					<li><strong>Fixed:</strong> Several miscellaneous and rare
 					crashes.</li>
-					<li><strong>Fixed:</strong> The installer would display a 
+					<li><strong>Fixed:</strong> The installer would display a
 					bizarre error if a &quot;blank&quot; install folder was attempted.</li>
-					<li><strong>Fixed:</strong> The installer now only accepts 
-					absolute path locations, instead of relative ones. This 
-					fixes an ambiguity between where Paint.NET believes it is 
-					installing itself to, and the directory that Windows 
+					<li><strong>Fixed:</strong> The installer now only accepts
+					absolute path locations, instead of relative ones. This
+					fixes an ambiguity between where Paint.NET believes it is
+					installing itself to, and the directory that Windows
 					Installer actually uses.</li>
 					</font>
-					<li><strong>Fixed:</strong> Sometimes pasting would result 
-					in a crash when certain types of malfored data were on the 
+					<li><strong>Fixed:</strong> Sometimes pasting would result
+					in a crash when certain types of malfored data were on the
 					clipboard.</li>
-					<li><strong>Fixed:</strong> It was possible to get around 
-					some of the protections imposed by the IndirectUI system. 
-					This was causing instability with some effect plugins such 
+					<li><strong>Fixed:</strong> It was possible to get around
+					some of the protections imposed by the IndirectUI system.
+					This was causing instability with some effect plugins such
 					as &quot;Fern Fractal&quot;.</li>
-					<li><strong>Fixed:</strong> There were some issues with the 
-					implementation of &quot;linked&quot; sliders for effects 
+					<li><strong>Fixed:</strong> There were some issues with the
+					implementation of &quot;linked&quot; sliders for effects
 					based on IndirectUI.</li>
 				</ul></font>
 
@@ -602,103 +845,103 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 				<a href="download.html#download">
 				Download</a><br>
 				This is mostly a servicing release to fix a few important bugs.</font><ul>
-					<li><font size="2"><strong>New: </strong>Enabled integration 
-					with <a href="http://www.windowclippings.com/">Window 
-					Clippings</a>, which is a high quality screen capture 
+					<li><font size="2"><strong>New: </strong>Enabled integration
+					with <a href="http://www.windowclippings.com/">Window
+					Clippings</a>, which is a high quality screen capture
 					utility by Kenny Kerr.</font></li>
-					<li><font size="2"><strong>Fixed:</strong> Fixed a crash 
-					with the Open/Save dialogs if the Documents or Pictures 
-					directories were either inaccessible or if the user did not 
+					<li><font size="2"><strong>Fixed:</strong> Fixed a crash
+					with the Open/Save dialogs if the Documents or Pictures
+					directories were either inaccessible or if the user did not
 					have certain file system permissions.</font></li>
-					<li><font size="2"><strong>Changed / Fixed:</strong> The 
-					hotkey for Adjustments -&gt; Levels is now Ctrl+Shift+L instead 
-					of Ctrl+Alt+L. This was preventing certain characters, such 
+					<li><font size="2"><strong>Changed / Fixed:</strong> The
+					hotkey for Adjustments -&gt; Levels is now Ctrl+Shift+L instead
+					of Ctrl+Alt+L. This was preventing certain characters, such
 					as the Polish &#39;ł&#39;, from being typed.</font><br>
 					</li>
 				</ul>
-								
-				
+
+
 				<p><font size="2"><b>Paint.NET v3.30
 				</b>Released<b>:
 				</b>April 10th, 2008<br>
-				
+
 				This
-				release adds an Italian translation, a new &quot;Fragment Blur&quot; effect, 
-				and the 
-				ability to save PNG images at 8- and 24-bit color depths. For 
-				developers, the IndirectUI system has some new controls, some 
+				release adds an Italian translation, a new &quot;Fragment Blur&quot; effect,
+				and the
+				ability to save PNG images at 8- and 24-bit color depths. For
+				developers, the IndirectUI system has some new controls, some
 				new constraint rules, and can now be used for file type plugins.</font></p>
-		
+
 				<font size="2">
 				<ul>
-		
+
 				<font size="2">
-					<li><strong>New:</strong> Italian 
+					<li><strong>New:</strong> Italian
 					translation.</li>
-					<li><strong>New:</strong> Ability to save 
-					PNG&#39;s at 8- and 
+					<li><strong>New:</strong> Ability to save
+					PNG&#39;s at 8- and
 					24-bit color depths.</li>
-					<li><strong>New:</strong> Ability to save 
+					<li><strong>New:</strong> Ability to save
 					BMP&#39;s at 8-bit color depth.</li>
-					<li><strong>New:</strong> &quot;Auto-detect&quot; 
-					bit-depth option for PNG, BMP, and TGA file types. It will 
-					analyze the image and determine the lowest bit-depth that 
+					<li><strong>New:</strong> &quot;Auto-detect&quot;
+					bit-depth option for PNG, BMP, and TGA file types. It will
+					analyze the image and determine the lowest bit-depth that
 					can still save the image without quality loss.</li>
-					<li><strong>New:</strong> &quot;Fragment&quot; blur 
+					<li><strong>New:</strong> &quot;Fragment&quot; blur
 					effect, by Ed Harvey</li>
-				<li><strong>New:</strong> The &quot;Polar 
-					Inversion&quot; distortion effect has been enhanced to allow 
-					changing the rendering offset, and the behavior for &quot;edge&quot; 
+				<li><strong>New:</strong> The &quot;Polar
+					Inversion&quot; distortion effect has been enhanced to allow
+					changing the rendering offset, and the behavior for &quot;edge&quot;
 					pixels (clamp, reflect, or wrap).</li>
-				<li><strong>New:</strong> For developers, added a Color 
+				<li><strong>New:</strong> For developers, added a Color
 					Wheel control to IndirectUI for use in effect plugins.</li>
-				<li><strong>New:</strong> For developers, added ability to 
-					customize certain properties of the effect configuration 
+				<li><strong>New:</strong> For developers, added ability to
+					customize certain properties of the effect configuration
 					dialog via IndirectUI.</li>
-				<li><strong>New:</strong> For developers, 
-					IndirectUI can now be used to write configuration 
+				<li><strong>New:</strong> For developers,
+					IndirectUI can now be used to write configuration
 					UI for file types.</li>
-				<li><strong>New:</strong> For developers, 
-					IndirectUI has a new radio button control type for 
+				<li><strong>New:</strong> For developers,
+					IndirectUI has a new radio button control type for
 					enumerations, and some new property constraint rules.</li>
-				<li><strong>Changed:</strong> Most effects and adjustments, 
-					including plugins that use IndirectUI, have been visually 
-					refreshed. The new look is cleaner and more compact. These 
+				<li><strong>Changed:</strong> Most effects and adjustments,
+					including plugins that use IndirectUI, have been visually
+					refreshed. The new look is cleaner and more compact. These
 					changes are shown in more detail at
 				<a href="http://blog.getpaint.net/2008/03/10/cleaning-up-the-ui-for-paintnet-v330/">http://blog.getpaint.net/2008/03/10/cleaning-up-the-ui-for-paintnet-v330/</a>
 				</li>
-				<li><strong>Fixed:</strong> Various UI issues with the 
+				<li><strong>Fixed:</strong> Various UI issues with the
 					Levels adjustment.</li>
-				<li><strong>Fixed:</strong> When pasting text into the Text 
+				<li><strong>Fixed:</strong> When pasting text into the Text
 					tool with Ctrl+V, it would hide the nub for moving the text.</li>
-				<li><strong>Fixed:</strong> If the startup tool was set to 
-					the Zoom or Pan (Hand) tool, then the toolbar would render 
+				<li><strong>Fixed:</strong> If the startup tool was set to
+					the Zoom or Pan (Hand) tool, then the toolbar would render
 					incorrectly.</li>
-				<li><strong>Fixed:</strong> Thumbnails for PDN images now 
-					include transparency, which improves their appearance in 
+				<li><strong>Fixed:</strong> Thumbnails for PDN images now
+					include transparency, which improves their appearance in
 					Windows Vista.</li>
-				<li><strong>Fixed:</strong> In some cases, an exponential 
-					property slider would get &quot;stuck&quot; at some values when using 
-					up/down keyboard keys. This mostly affects some effect 
+				<li><strong>Fixed:</strong> In some cases, an exponential
+					property slider would get &quot;stuck&quot; at some values when using
+					up/down keyboard keys. This mostly affects some effect
 					plugins.</li>
-				<li><strong>Fixed:</strong> When using keyboard navigation, 
+				<li><strong>Fixed:</strong> When using keyboard navigation,
 					sometimes the File menu would scroll its items out of view.</li>
-				<li><strong>Fixed: </strong>Some crashes that were tracked 
+				<li><strong>Fixed: </strong>Some crashes that were tracked
 					down to out-of-bounds coordinate values in certain effects.</li>
-				<li><strong>Fixed:</strong> The installer 
-					would fail if Paint.NET had never been installed before, and 
-					was being installed to any non-default directory. This bug 
+				<li><strong>Fixed:</strong> The installer
+					would fail if Paint.NET had never been installed before, and
+					was being installed to any non-default directory. This bug
 					only affected version 3.22.</li>
 				</ul>
 					</font>
-				
+
 				<p><font size="2"><b>Paint.NET v3.22
 				</b>Released<b>:
 				</b>January 12th, 2008 - <a href="download.html#Download">
 				Download</a><b><br>
-				</b>This release fixes a few minor bugs and adds a new, much-needed 
-				<strong>Reduce Noise</strong> effect.</font></p>				
-				
+				</b>This release fixes a few minor bugs and adds a new, much-needed
+				<strong>Reduce Noise</strong> effect.</font></p>
+
 				<font size="2">
 				<ul>
 					<font size="2">
@@ -708,323 +951,323 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 					<li><strong>Fixed</strong>: In Windows XP, when launching web content, sometimes Internet Explorer was used instead of the user's chosen default browser.</li>
 					<li><strong>Fixed</strong>: The Unfocus effect was not handling alpha values properly.</li>
 					<li><strong>Fixed</strong>: The Brightness / Contrast adjustment was only displaying its text in English.</li>
-					<li><strong>Fixed</strong>: The /auto parameter for the installer now correctly allows for an automated installation. This was 
+					<li><strong>Fixed</strong>: The /auto parameter for the installer now correctly allows for an automated installation. This was
 					inadvertently broken in 3.20.</li>
 				</ul>
 				</font>
-				
+
 				<p><font size="2">
 				<b>Paint.NET v3.20 </b>Released<b>: </b>December 12th, 2007<br>
-				This release adds numerous enhancements and tweaks to the 
-				built-in effects, a re-organized Effects menu, a new and much 
-				easier system for effect plugin development, 
-				better error handling for plugins, and the ability to draw Fixed 
-				Ratio and Fixed Size selections with the Rectangle Select tool. 
-				It also includes the customary list of tweaks and fixes.</font></p>				
-				
+				This release adds numerous enhancements and tweaks to the
+				built-in effects, a re-organized Effects menu, a new and much
+				easier system for effect plugin development,
+				better error handling for plugins, and the ability to draw Fixed
+				Ratio and Fixed Size selections with the Rectangle Select tool.
+				It also includes the customary list of tweaks and fixes.</font></p>
+
 				<font size="2">
 				<ul>
-					<li>Rectangle Select tool can now draw selections based on a 
+					<li>Rectangle Select tool can now draw selections based on a
 					<b>Fixed Size</b> or <b>Fixed Ratio</b> setting.<br>
 					<img border="0" src="images/RectangleSelectFixedSizeRatio.png" width="609" height="106"><br>
 &nbsp;</li>
-					<li>The selection combination mode is now accessible from 
+					<li>The selection combination mode is now accessible from
 					the toolbar (Replace, Add, Subtract, Invert (&quot;xor&quot;)).<br>
 					<img border="0" src="images/SelectionMode.png" width="325" height="121"><br>
 &nbsp;</li>
-					<li>The &quot;flood mode&quot; for the Magic Wand and Paint Bucket 
-					tool are now accessible from the toolbar (Continuous, or 
+					<li>The &quot;flood mode&quot; for the Magic Wand and Paint Bucket
+					tool are now accessible from the toolbar (Continuous, or
 					Global).<br>
 					<img border="0" src="images/MagicWandContiguousGlobal.png" width="538" height="79"><br>
 &nbsp;</li>
-					<li>Reorganized the Effects menu so that all effects are 
-					classified under submenus named Artistic, Blurs, Distort, 
+					<li>Reorganized the Effects menu so that all effects are
+					classified under submenus named Artistic, Blurs, Distort,
 					Noise, Photo, Render, and Stylize.</li>
-					<li>Improved rendering quality for the <b>Motion Blur</b> 
+					<li>Improved rendering quality for the <b>Motion Blur</b>
 					effect.</li>
-					<li>Enhanced the <b>Radial Blur</b> effect so that the center of 
+					<li>Enhanced the <b>Radial Blur</b> effect so that the center of
 					blurring can be chosen, as well as the quality.</li>
-					<li>Enhanced the <b>Zoom Blur</b> effect so that the center of 
+					<li>Enhanced the <b>Zoom Blur</b> effect so that the center of
 					zooming can be chosen.</li>
-					<li>Enhanced the <b>Bulge</b> distortion effect so that the center 
+					<li>Enhanced the <b>Bulge</b> distortion effect so that the center
 					of &quot;bulging&quot; can be chosen.</li>
-					<li>Enhanced the <b>Frosted Glass</b> distortion effect in several 
-					ways: 1) performance has been improved from between 1,000% 
-					to 10,000% depending on image size and property settings, 2) 
-					the scatter radius can now be set up to 200 pixels, 3) a 
-					&quot;minimum&quot; scatter radius can be chosen, 4) a smoothness 
+					<li>Enhanced the <b>Frosted Glass</b> distortion effect in several
+					ways: 1) performance has been improved from between 1,000%
+					to 10,000% depending on image size and property settings, 2)
+					the scatter radius can now be set up to 200 pixels, 3) a
+					&quot;minimum&quot; scatter radius can be chosen, 4) a smoothness
 					setting is now available.</li>
-					<li>Enhanced the <b>Tile Reflection</b> distortion effect by adding 
+					<li>Enhanced the <b>Tile Reflection</b> distortion effect by adding
 					a Quality property.</li>
-					<li>Enhanced the <b>Twist</b> distortion effect by 1) allowing 
-					counter-clockwise twisting, 2) allowing the size of the 
-					twisted area to be configured, 3) allowing the 
+					<li>Enhanced the <b>Twist</b> distortion effect by 1) allowing
+					counter-clockwise twisting, 2) allowing the size of the
+					twisted area to be configured, 3) allowing the
 					location/center of twisting to be chosen.</li>
-					<li>Enhanced the <b>Add Noise</b> effect by adding a &quot;coverage&quot; 
+					<li>Enhanced the <b>Add Noise</b> effect by adding a &quot;coverage&quot;
 					property.</li>
 					<li>New <b>Mandelbrot Fractal</b> and <b>Julia Fractal</b> render effects.</li>
-					<li>New <b>IndirectUI</b> system for plugin authors so that they 
-					can develop much more sophisticated effect configuration 
-					dialogs with a fraction of the amount of work that used to 
+					<li>New <b>IndirectUI</b> system for plugin authors so that they
+					can develop much more sophisticated effect configuration
+					dialogs with a fraction of the amount of work that used to
 					be required.</li>
-					<li>If an effect plugin crashes, it is much more likely that 
+					<li>If an effect plugin crashes, it is much more likely that
 					Paint.NET will be able to recover from the error.</li>
-					<li>The option to restart Paint.NET will then be provided as 
+					<li>The option to restart Paint.NET will then be provided as
 					a recommended course of action.</li>
-					<li>If an effect plugin fails to load, or is blocked from 
-					loading, then a &quot;View Plugin Load Errors...&quot; item will be 
-					added to the File menu which can be clicked on to show the 
+					<li>If an effect plugin fails to load, or is blocked from
+					loading, then a &quot;View Plugin Load Errors...&quot; item will be
+					added to the File menu which can be clicked on to show the
 					error and/or diagnostic information.</li>
-					<li>Improved the cursors for the Magic Wand and Paint Bucket 
+					<li>Improved the cursors for the Magic Wand and Paint Bucket
 					tools.</li>
-					<li><b>Ctrl+Alt+0</b> now works for View-&gt;Actual Size (aka, &quot;Zoom 
-					to 100%&quot;), which is a shortcut key that other software uses 
+					<li><b>Ctrl+Alt+0</b> now works for View-&gt;Actual Size (aka, &quot;Zoom
+					to 100%&quot;), which is a shortcut key that other software uses
 					(e.g., Photoshop).</li>
-					<li><b>Updates are now installed faster</b> by only creating one 
-					System Restore point instead of two (it used to implicitly 
+					<li><b>Updates are now installed faster</b> by only creating one
+					System Restore point instead of two (it used to implicitly
 					create one for uninstall, then one for the reinstall).</li>
 					<li>Lots of little bug fixes.</li>
 					</ul>
 					<p>
                 </a><b>Paint.NET v3.10 </b>Released<b>: </b>August 23rd, 2007<br>
-				This release adds two new 
-				effects originally written by David Issel ("BoltBait"), support for the	DDS filetype originally 
+				This release adds two new
+				effects originally written by David Issel ("BoltBait"), support for the	DDS filetype originally
 				written by Dean Ashton, as well as many small bug fixes and some visual fit and finish.
 				<ul>
-					<li><font size="2"><b>New:</b> Soften Portrait effect, by 
+					<li><font size="2"><b>New:</b> Soften Portrait effect, by
 					David Issel, <a href="http://www.BoltBait.com">
 					http://www.BoltBait.com</a> .</font></li>
-					<li><font size="2"><b>New:</b> Ink Sketch effect, by David 
+					<li><font size="2"><b>New:</b> Ink Sketch effect, by David
 					Issel, <a href="http://www.BoltBait.com">
 					http://www.BoltBait.com</a> .</font></li>
-					<li><font size="2"><b>New:</b> DirectDraw Surface (DDS) file 
+					<li><font size="2"><b>New:</b> DirectDraw Surface (DDS) file
 					format support, by Dean Ashton,
 					<a href="http://www.dmashton.co.uk/">
-					http://www.dmashton.co.uk/</a> . Improved from the original 
-					source code by optimizing the DXT compression library 
-					(&quot;Squish&quot;) to take advantage of multiple cores / 
+					http://www.dmashton.co.uk/</a> . Improved from the original
+					source code by optimizing the DXT compression library
+					(&quot;Squish&quot;) to take advantage of multiple cores /
 					processors.</font></li>
-					<li><font size="2"><b>New:</b> &quot;Paint.NET Search&quot;, available 
-					from the Help menu (shortcut key is Ctrl+E), allows you to 
-					search for Paint.NET help, forum posts, tutorials, plugins, 
+					<li><font size="2"><b>New:</b> &quot;Paint.NET Search&quot;, available
+					from the Help menu (shortcut key is Ctrl+E), allows you to
+					search for Paint.NET help, forum posts, tutorials, plugins,
 					and other related material: <a href="http://searchpaint.net">
-					http://searchpaint.net</a> (Note: This feature is only 
+					http://searchpaint.net</a> (Note: This feature is only
 					available in English.)</font></li>
-					<li><font size="2"><b>Improved:</b> Visual fit-and-finish 
+					<li><font size="2"><b>Improved:</b> Visual fit-and-finish
 					for the Layers window.</font></li>
-					<li><font size="2"><b>Improved:</b> Visual fit-and-finish 
+					<li><font size="2"><b>Improved:</b> Visual fit-and-finish
 					for the close / &#39;X&#39; button on image thumbnails.</font></li>
-					<li><font size="2"><b>Improved:</b> Small (about 5-10%) 
-					performance improvements for some effects such as Oil 
+					<li><font size="2"><b>Improved:</b> Small (about 5-10%)
+					performance improvements for some effects such as Oil
 					Painting, Frosted Glass, and Gaussian Blur.</font></li>
-					<li><font size="2"><b>Improved:</b> Increased max brush size 
+					<li><font size="2"><b>Improved:</b> Increased max brush size
 					to 500, as per forum members request.</font></li>
-					<li><font size="2"><b>Improved:</b> Expanded list of 
+					<li><font size="2"><b>Improved:</b> Expanded list of
 					available font sizes up through 288.</font></li>
-					<li><font size="2"><b>Changed:</b> The keyboard shortcut key 
-					for the Color Picker is now &#39;k&#39;. This makes it so that the 
-					toolbar option, &quot;After click: Switch to previous tool&quot;, is 
+					<li><font size="2"><b>Changed:</b> The keyboard shortcut key
+					for the Color Picker is now &#39;k&#39;. This makes it so that the
+					toolbar option, &quot;After click: Switch to previous tool&quot;, is
 					not useless for those using the keyboard shortcuts.</font></li>
-					<li><font size="2"><b>Fixed:</b> In some cases, undoing an 
-					action that removed a layer would result in the un-removed layer not showing up until you resized the Layers window 
+					<li><font size="2"><b>Fixed:</b> In some cases, undoing an
+					action that removed a layer would result in the un-removed layer not showing up until you resized the Layers window
 					(&quot;ghost layers&quot;).</font></li>
-					<li><font size="2"><b>Fixed:</b> Pressing F1 from the main 
+					<li><font size="2"><b>Fixed:</b> Pressing F1 from the main
 					window no longer launches the online help in two browser tabs.</font></li>
-					<li><font size="2"><b>Fixed:</b> Adding a new layer now adds 
-					it above the currently active layer, instead of at the very 
+					<li><font size="2"><b>Fixed:</b> Adding a new layer now adds
+					it above the currently active layer, instead of at the very
 					top of the layer list.</font></li>
-					<li><font size="2"><b>Fixed:</b> Merge Down now activates 
+					<li><font size="2"><b>Fixed:</b> Merge Down now activates
 					the merged layer instead of the one above it.</font></li>
-					<li><font size="2"><b>Fixed:</b> In Vista, clicking on a URL 
-					link from the installer will no longer launch the web browser with inherited, 
+					<li><font size="2"><b>Fixed:</b> In Vista, clicking on a URL
+					link from the installer will no longer launch the web browser with inherited,
 					elevated privileges.</font></li>
-					<li><font size="2"><b>Fixed:</b> Pressing Ctrl+[ no longer 
-					cancels out of drawing a line/curve, but instead decreases 
+					<li><font size="2"><b>Fixed:</b> Pressing Ctrl+[ no longer
+					cancels out of drawing a line/curve, but instead decreases
 					the brush size by 5 as expected.</font></li>
-					<li><font size="2"><b>Fixed:</b> Ctrl+clicking on the brush 
-					size +/- buttons now changes the brush size in increments of 
+					<li><font size="2"><b>Fixed:</b> Ctrl+clicking on the brush
+					size +/- buttons now changes the brush size in increments of
 					5.</font></li>
-					<li><font size="2"><b>Fixed:</b> Save Configuration dialog 
-					would &quot;creep downward&quot; from its last position every time it 
+					<li><font size="2"><b>Fixed:</b> Save Configuration dialog
+					would &quot;creep downward&quot; from its last position every time it
 					was opened again.</font></li>
-					<li><font size="2"><b>Fixed:</b> TGA codec now saves the # 
-					of alpha bits to the image descriptor byte. This was causing 
-					some other applications to load TGA files saved with 
+					<li><font size="2"><b>Fixed:</b> TGA codec now saves the #
+					of alpha bits to the image descriptor byte. This was causing
+					some other applications to load TGA files saved with
 					Paint.NET as solid black images.</font></li>
-					<li><font size="2"><b>Fixed:</b> Clicking the &#39;X&#39; to close 
-					the Layer Properties dialog was not reverting changes made 
+					<li><font size="2"><b>Fixed:</b> Clicking the &#39;X&#39; to close
+					the Layer Properties dialog was not reverting changes made
 					to the layer while the dialog was open.</font></li>
-					<li><font size="2"><b>Fixed:</b> Installation will not 
-					proceed unless Paint.NET is closed, and will also not allow 
-					Paint.NET to be opened until installation is completed. This 
-					helps to ensure a fully coherent and complete installation 
+					<li><font size="2"><b>Fixed:</b> Installation will not
+					proceed unless Paint.NET is closed, and will also not allow
+					Paint.NET to be opened until installation is completed. This
+					helps to ensure a fully coherent and complete installation
 					or update.</font></li>
-					<li><font size="2"><b>Fixed: </b>If a file failed to open, 
-					and there were no open images, and the user pressed either 
-					the Zoom In or Zoom Out toolbar buttons, then Paint.NET 
+					<li><font size="2"><b>Fixed: </b>If a file failed to open,
+					and there were no open images, and the user pressed either
+					the Zoom In or Zoom Out toolbar buttons, then Paint.NET
 					would crash.</font></li>
-					<li><font size="2"><b>Fixed:</b> In Vista, it was possible 
-					to crash the Save As dialog by typing a filename that was 
+					<li><font size="2"><b>Fixed:</b> In Vista, it was possible
+					to crash the Save As dialog by typing a filename that was
 					too long.</font></li>
-					<li><font size="2"><b>Fixed:</b> In Vista, it was possible 
+					<li><font size="2"><b>Fixed:</b> In Vista, it was possible
 					to crash the updater if you let the UAC prompt time-out.</font></li>
-					<li><font size="2"><b>Fixed:</b> It was possible to crash 
-					Paint.NET on some systems by clicking on a tool in the Tools 
+					<li><font size="2"><b>Fixed:</b> It was possible to crash
+					Paint.NET on some systems by clicking on a tool in the Tools
 					window while the &quot;Save As&quot; dialog was open.</li>
 					</ul>
-		
+
 				<b>v3.08 </b>Released<b>: </b>June 1st, 2007<br>
-				This is mostly a service release that fixes some bugs, while 
+				This is mostly a service release that fixes some bugs, while
 				also improving keyboard / accessibility cues for some dialogs.
 				<ul>
-					<li><b>Fixed</b>: Pasting an image from Office 2003 
+					<li><b>Fixed</b>: Pasting an image from Office 2003
 					applications now works (e.g. Excel 2003 graphs).</li>
-					<li><b>Fixed</b>: Some dialogs were not indicating which 
-					command button was the default. These buttons now have a 
-					highlight to indicate which one will be activated if the 
+					<li><b>Fixed</b>: Some dialogs were not indicating which
+					command button was the default. These buttons now have a
+					highlight to indicate which one will be activated if the
 					user presses Enter or Space.</li>
-					<li><b>Fixed</b>: Some minor keyboard navigation issues with 
+					<li><b>Fixed</b>: Some minor keyboard navigation issues with
 					task dialogs</li>
-					<li><b>Fixed</b>: Performance issue with the File-&gt;Acquire 
+					<li><b>Fixed</b>: Performance issue with the File-&gt;Acquire
 					submenu taking a long time to appear</li>
-					<li><b>Fixed</b>: Window activation issue when the Print 
+					<li><b>Fixed</b>: Window activation issue when the Print
 					wizard was finished / closed</li>
-					<li><b>Fixed</b>: Crash when there was 1 image open and the 
+					<li><b>Fixed</b>: Crash when there was 1 image open and the
 					user pressed Ctrl+Q and then Ctrl+W</li>
-					<li><b>Fixed</b>: Minor performance issue if the user had 1 
-					modified image open and then canceled the &quot;Save changes?&quot; 
+					<li><b>Fixed</b>: Minor performance issue if the user had 1
+					modified image open and then canceled the &quot;Save changes?&quot;
 					dialog</li>
-					<li><b>Fixed</b>: Misbehaving filetype factory 
+					<li><b>Fixed</b>: Misbehaving filetype factory
 					implementations (plugins) will no longer cause a crash</li>
 				</ul>
 				<b>v3.07 </b>Released<b>: </b>May 8th, 2007<br>
-				This update enhances the Line/Curve tool, significantly reduces 
-				the download size, and fixes some bugs related to opening and 
+				This update enhances the Line/Curve tool, significantly reduces
+				the download size, and fixes some bugs related to opening and
 				saving files in Windows Vista.<ul>
-					<li><b>New</b>: Line/Curve tool has been enhanced to allow 
-					drawing arrowheads, and to draw with various dashed- and 
+					<li><b>New</b>: Line/Curve tool has been enhanced to allow
+					drawing arrowheads, and to draw with various dashed- and
 					dotted- styles.</li>
-					<li><b>New</b>: Image tab thumbnails now have an indicator 
-					if the respective image has unsaved changes (an orange 
+					<li><b>New</b>: Image tab thumbnails now have an indicator
+					if the respective image has unsaved changes (an orange
 					asterisk is shown).</li>
-					<li><b>Improved:</b> The Save Configuration dialog (choose 
-					JPEG quality, etc.) now allows you to maximize it. It also 
+					<li><b>Improved:</b> The Save Configuration dialog (choose
+					JPEG quality, etc.) now allows you to maximize it. It also
 					remembers its relative location and size.</li>
-					<li><b>Changed:</b> The help file / documentation is now 
-					hosted online. This has reduced the download size by more 
-					than 3 MB, and will also allow us to provide translations 
-					without ballooning the size of the download (each language 
+					<li><b>Changed:</b> The help file / documentation is now
+					hosted online. This has reduced the download size by more
+					than 3 MB, and will also allow us to provide translations
+					without ballooning the size of the download (each language
 					would have added between 2 and 4MB).</li>
-					<li><b>Changed:</b> The &quot;image list button&quot; (downward 
-					triangle) is also shown when only 1 image is open (it used 
-					to only display if 2 or more images were open). This is 
+					<li><b>Changed:</b> The &quot;image list button&quot; (downward
+					triangle) is also shown when only 1 image is open (it used
+					to only display if 2 or more images were open). This is
 					being done for the sake of consistency.</li>
-					<li><b>Fixed:</b> Some operations would reset the selected 
-					layer to the first/lowest layer. This selection is now 
+					<li><b>Fixed:</b> Some operations would reset the selected
+					layer to the first/lowest layer. This selection is now
 					preserved.</li>
-					<li><b>Fixed:</b> The Image-&gt;Rotate commands no longer hang 
+					<li><b>Fixed:</b> The Image-&gt;Rotate commands no longer hang
 					if a selection was active.</li>
-					<li><b>Fixed: </b>Several problems have been fixed within 
-					our implementation surrounding the new Vista Open/Save 
-					dialogs. This includes: opening an image from an http:// 
-					source, opening images from a digital camera that is not 
-					mapped to a file system path (such as a drive letter), the 
-					Save dialog not always prompting you about overwriting an 
-					existing file, and many corner cases that previously caused 
+					<li><b>Fixed: </b>Several problems have been fixed within
+					our implementation surrounding the new Vista Open/Save
+					dialogs. This includes: opening an image from an http://
+					source, opening images from a digital camera that is not
+					mapped to a file system path (such as a drive letter), the
+					Save dialog not always prompting you about overwriting an
+					existing file, and many corner cases that previously caused
 					crashes.</li>
 				</ul>
 				<b>v3.05 </b>Released<b>: </b>March 29th, 2007<br>
-				This is a minor update that adds a new effect, improves certain 
+				This is a minor update that adds a new effect, improves certain
 				parts of the user interface, and fixes a few minor bugs.<ul>
 					<li><b>New</b>: Pencil Sketch effect</li>
-					<li><b>New</b>: In Windows Vista, the new-style Save/Open 
-					dialogs are used. Among other things, this enables Search 
+					<li><b>New</b>: In Windows Vista, the new-style Save/Open
+					dialogs are used. Among other things, this enables Search
 					functionality.</li>
-					<li><b>Changed</b>: The View-&gt;Units, Image-&gt;Flip, 
-					Image-&gt;Rotate, and Layers-&gt;Flip submenus have been 
-					&quot;flattened&quot; (their commands were moved out into the View, 
+					<li><b>Changed</b>: The View-&gt;Units, Image-&gt;Flip,
+					Image-&gt;Rotate, and Layers-&gt;Flip submenus have been
+					&quot;flattened&quot; (their commands were moved out into the View,
 					Image, Image, and Layers menus respectively)</li>
-					<li><b>Improved</b>: Download size reduced by about 300 KB 
+					<li><b>Improved</b>: Download size reduced by about 300 KB
 					by using <a href="http://en.wikipedia.org/wiki/PNGOUT">
 					PNGOUT</a></li>
-					<li><b>Improved</b>: Some uses of confusing &quot;MessageBox&quot; 
-					style dialogs have been changed to a much friendlier &quot;TaskDialog&quot; 
+					<li><b>Improved</b>: Some uses of confusing &quot;MessageBox&quot;
+					style dialogs have been changed to a much friendlier &quot;TaskDialog&quot;
 					style interface</li>
-					<li><b>Improved</b>: When changing the language, Paint.NET 
+					<li><b>Improved</b>: When changing the language, Paint.NET
 					can now restart itself automatically</li>
-					<li><b>Improved</b>: Better performance for Move Selected Pixels 
-					tool for quad-core systems. This issue is documented and 
+					<li><b>Improved</b>: Better performance for Move Selected Pixels
+					tool for quad-core systems. This issue is documented and
 					explained here,
 					<a href="http://blogs.msdn.com/rickbrew/archive/2007/03/01/paint-net-many-core-performance-scaling-analyzed.aspx">
 					http://blogs.msdn.com/rickbrew/archive/2007/03/01/paint-net-many-core-performance-scaling-analyzed.aspx</a> </li>
-					<li><b>Removed</b>: The &quot;Clear History&quot; button has been 
+					<li><b>Removed</b>: The &quot;Clear History&quot; button has been
 					removed because it was not very useful</li>
-					<li><b>Fixed</b>: Sometimes the Colors window would get 
+					<li><b>Fixed</b>: Sometimes the Colors window would get
 					&quot;lost&quot; between sessions of Paint.NET</li>
-					<li><b>Fixed</b>: Stack-overflow crash when using certain 
-					effects, such as Gaussian Blur, on very large images with 
+					<li><b>Fixed</b>: Stack-overflow crash when using certain
+					effects, such as Gaussian Blur, on very large images with
 					certain settings (such as a 200 pixel radius)</li>
-					<li><b>Fixed</b>: When cancelling the multi-image Unsaved 
+					<li><b>Fixed</b>: When cancelling the multi-image Unsaved
 					Changes dialog, the input focus was sometimes confused</li>
-					<li><b>Changed</b>: Renamed PdnLib.dll to 
+					<li><b>Changed</b>: Renamed PdnLib.dll to
 					PaintDotNet.Core.dll</li>
-					<li><b>Fixed</b>: Very rare race condition in background 
+					<li><b>Fixed</b>: Very rare race condition in background
 					thumbnail renderer</li>
 				</ul>
 				<p>
 				<b>v3.01 </b>Released: February 26th, 2007 -
 				<a href="download.html">Download</a><br>
-				This is a small update that fixes a few bugs that have been 
+				This is a small update that fixes a few bugs that have been
 				found since 3.0 was released.</font></p>
 				<ul>
 					<li><font size="2">Fixed: Crash when trying to save a palette with a blank name</li>
-					<li><span class="postbody">Fixed: Changing an image&#39;s DPI 
-					resolution did not set its &quot;dirty&quot; flag (you would not be 
+					<li><span class="postbody">Fixed: Changing an image&#39;s DPI
+					resolution did not set its &quot;dirty&quot; flag (you would not be
 					asked to save changes)</span></li>
-					<li><span class="postbody">Fixed: Error messages at startup were covered by the splash 
+					<li><span class="postbody">Fixed: Error messages at startup were covered by the splash
 					screen</span></li>
-					<li><span class="postbody">Fixed: Crash when a modal dialog was open (such as an 
-					effect) when the user tried to logoff/restart/shutdown Windows, 
+					<li><span class="postbody">Fixed: Crash when a modal dialog was open (such as an
+					effect) when the user tried to logoff/restart/shutdown Windows,
 					and they chose to save their images</span></li>
-					<li><span class="postbody">Mitigated some CPU usage issues when the app was minimized 
+					<li><span class="postbody">Mitigated some CPU usage issues when the app was minimized
 					and a complex selection was active</span></li>
 					</ul></font>
 					<p><font size="2"><b>v3.0</b> Released: January 26th, 2007<br>
-								This major release introduces a new 
-				multi-document interface (MDI), availability in 8 languages, a 
-				highly-requested interactive gradient tool, four new effects, a 
-				user-definable color palette, lower disk space usage for scratch 
+								This major release introduces a new
+				multi-document interface (MDI), availability in 8 languages, a
+				highly-requested interactive gradient tool, four new effects, a
+				user-definable color palette, lower disk space usage for scratch
 				files, and a generally cleaner and improved user interface.</font><p><font size="2"><b>What&#39;s new in Paint.NET v3.0?</b></font></p>
 				<ul>
 					<li><font size="2">Simple and intuitive <b>tab-based multi-document user interface<br>
 					<img border="0" src="images/pdn30_imageList.jpg" width="613" height="120"><br>
 &nbsp;</b></font></li>
-					<li><font size="2"><b>Now available in 8 languages:</b> English, 
-					Chinese (Simplified), French, German, Japanese, Korean, 
+					<li><font size="2"><b>Now available in 8 languages:</b> English,
+					Chinese (Simplified), French, German, Japanese, Korean,
 					Portuguese (Brazil), and Spanish<br>
 					<img border="0" src="images/pdn30_intl.jpg"><br>
 &nbsp;</font></li>
-					<li><font size="2"><b>Interactive Gradient Tool</b> that 
-					makes it very easy to draw and then fine-tune placement and 
+					<li><font size="2"><b>Interactive Gradient Tool</b> that
+					makes it very easy to draw and then fine-tune placement and
 					coloring of a gradient.<br>
 					</font>
 					<img border="0" src="images/pdn30_gradient.png" width="225" height="224"><br>
 &nbsp;</li>
-					<li><font size="2">User-definable color palette (as opposed 
+					<li><font size="2">User-definable color palette (as opposed
 					to just the color wheel)<br>
 					</font><img border="0" src="images/pdn30_colorSwatch.png"><br>
 &nbsp;</li>
-					<li><font size="2">New effects: Clouds, Median, Unfocus, 
+					<li><font size="2">New effects: Clouds, Median, Unfocus,
 					Outline, and an improved Sharpen</font></li>
 					<li><font size="2">More intuitive and more powerful toolbar</font></li>
-					<li><font size="2">Generally improved and cleaner user 
+					<li><font size="2">Generally improved and cleaner user
 					interface</font></li>
-					<li><font size="2">History files are now compressed to save 
+					<li><font size="2">History files are now compressed to save
 					disk space, reduce disk activity, and improve performance.</font></li>
 					<li><font size="2">&quot;Merge Down&quot; layer command</font></li>
 				</ul>
-				<p><font size="2" color="#FF0000">Please note that <b>Windows 
-				2000 is no longer supported</b>. Paint.NET v3.0 will not install 
+				<p><font size="2" color="#FF0000">Please note that <b>Windows
+				2000 is no longer supported</b>. Paint.NET v3.0 will not install
 				unless your operating system is Windows XP SP2 or newer.</font></p>
 				<p><font size="2"><b><a name="v2_72"></a></p>
 				<p></p>Paint.NET v2.7x<br>
@@ -1032,29 +1275,29 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 				</b>Released: August&nbsp; 31st, 2006<br>
 				This small release adds a new effect and fixes a few small bugs.<ul>
 					<li>New effect: Zoom Blur</li>
-					<li>Fixed: DPI was not being saved or loaded correctly for 
+					<li>Fixed: DPI was not being saved or loaded correctly for
 					file types other than PDN and JPEG</li>
-					<li>Fixed: Text Tool now works with Alt+#### special 
+					<li>Fixed: Text Tool now works with Alt+#### special
 					character entry without moving the cursor</li>
-					<li>Fixed: Loading PNG images with alpha was often resulting 
+					<li>Fixed: Loading PNG images with alpha was often resulting
 					in incorrect, off-by-1 color values</li>
 				</ul>
 				<b>
 				<a name="v2_70"></a><p>v2.70
 				</b>Released:<b> </b> August 2nd, 2006<br>
-				This is a small interim release that includes many of the 
-				popular effect plugins we have written that users have enjoyed 
-				using with Paint.NET v2.6x. We have decided to release this as a 
-				&quot;.1&quot; update now so that more users may benefit from these 
-				plugins, as opposed to waiting until the final release of v3.0 
+				This is a small interim release that includes many of the
+				popular effect plugins we have written that users have enjoyed
+				using with Paint.NET v2.6x. We have decided to release this as a
+				&quot;.1&quot; update now so that more users may benefit from these
+				plugins, as opposed to waiting until the final release of v3.0
 				to include them (which could be awhile). </p>
-				<p>With this release we have also refreshed Paint.NET&#39;s system 
-				requirements. We now list 256 MB as the minimum memory required 
-				instead of 128 MB. This is in line with what we have seen to be 
-				a more reasonable minimum system for using Paint.NET. Also, 
-				Windows XP users must now have SP2 installed (SP1 was required 
-				before), Windows 2000 users must have SP4 installed (SP3 was 
-				required before), and Windows Server 2003 users must have SP1 
+				<p>With this release we have also refreshed Paint.NET&#39;s system
+				requirements. We now list 256 MB as the minimum memory required
+				instead of 128 MB. This is in line with what we have seen to be
+				a more reasonable minimum system for using Paint.NET. Also,
+				Windows XP users must now have SP2 installed (SP1 was required
+				before), Windows 2000 users must have SP4 installed (SP3 was
+				required before), and Windows Server 2003 users must have SP1
 				installed (no SP was required before).</p>
 				</font>
 				<ul>
@@ -1067,133 +1310,133 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 				<p>
 				<strong><font size="2"><a name="v2_64"></a>Paint.NET v2.6x</font></strong><font size="2"><br>
 				<b>v2.64</b> Released: July 8th, 2006<br>
-				This small updates fixes a few minor bugs, and improves Windows 
-				Vista compatibility. As a bonus, it also adds much better GIF 
+				This small updates fixes a few minor bugs, and improves Windows
+				Vista compatibility. As a bonus, it also adds much better GIF
 				save quality.</font></p>
 				<ul>
-					<li><font size="2">Improved GIF save quality by implementing 
+					<li><font size="2">Improved GIF save quality by implementing
 					Floyd-Steinburg error diffusion algorithm</font></li>
 					<li><font size="2">Printing now works in Windows Vista</font></li>
-					<li><font size="2">Fixed a startup performance problem on 
-					some systems that was an artifact of the way the .NET 
-					Framework was verifying Authenticode signatures as part of 
+					<li><font size="2">Fixed a startup performance problem on
+					some systems that was an artifact of the way the .NET
+					Framework was verifying Authenticode signatures as part of
 					its assembly loading process</font></li>
-					<li><font size="2">Executable files now have UAC manifests 
-					to ensure proper execution privilege and to disable file and 
+					<li><font size="2">Executable files now have UAC manifests
+					to ensure proper execution privilege and to disable file and
 					registry virtualization in Windows Vista</font></li>
 				</ul>
 				<p>
 				<font size="2"><b>v2.63</b> Released: June 4th, 2006<br>
-				This small update fixes some more relatively minor bugs, and 
-				makes the built-in updater much more convenient in Windows 
+				This small update fixes some more relatively minor bugs, and
+				makes the built-in updater much more convenient in Windows
 				Vista.</font></p>
 				<ul>
-					<li><font size="2">Built-in updater now works in Vista 
-					without having to use &quot;Run as Administrator&quot; beforehand (UAC 
+					<li><font size="2">Built-in updater now works in Vista
+					without having to use &quot;Run as Administrator&quot; beforehand (UAC
 					permission is still required to install updates)</font></li>
-					<li><font size="2">Fixed a color intensity calculation that 
-					had Red and Blue swapped (affects Brightness/Contrast 
+					<li><font size="2">Fixed a color intensity calculation that
+					had Red and Blue swapped (affects Brightness/Contrast
 					adjustment, and some plugins)</font></li>
-					<li><font size="2">Fixed .PDN images with transparency 
+					<li><font size="2">Fixed .PDN images with transparency
 					having a black background in their Explorer thumbnail</font></li>
-					<li><font size="2">Fixed crash when an image has bizarre DPI 
+					<li><font size="2">Fixed crash when an image has bizarre DPI
 					settings (such as 6 billion DPI)</font></li>
-					<li><font size="2">Fixed crash when an image has an invalid 
-					resolution unit specified (neither pixels, inches, nor 
+					<li><font size="2">Fixed crash when an image has an invalid
+					resolution unit specified (neither pixels, inches, nor
 					centimeters)</font></li>
-					<li><font size="2">Fixed a few rare race conditions which 
+					<li><font size="2">Fixed a few rare race conditions which
 					resulted in crashes</font></li>
 					<li><font size="2">Fixed a rare crash with the history</font></li>
-					<li><font size="2">Fixed crashlog being created when the 
+					<li><font size="2">Fixed crashlog being created when the
 					updates dialog appears over another modal dialog</font></li>
-					<li><font size="2">Fixed crashlog not reporting application 
+					<li><font size="2">Fixed crashlog not reporting application
 					version with certain damaged installations</font></li>
 					<li><font size="2">Placed a clickable
-					<a href="http://onecare.live.com">Windows Live OneCare</a> 
+					<a href="http://onecare.live.com">Windows Live OneCare</a>
 					ad in the Setup wizard that expires on July 10th, 2006</font></li>
 				</ul>
 				<p>
 				<strong><font size="2"><a name="v2_62"></a></font></strong>
-				<font size="2"> 
+				<font size="2">
 				<b>v2.62</b> Released: May 10th, 2006 - <a href="download.html">
 				Download</a>
 				<br>
-				This small update fixes some bugs, and improves the user 
+				This small update fixes some bugs, and improves the user
 				experience on some Windows Vista systems.</font></p>
 				<ul>
-					<li><font size="2">Small icon (16x16) is brand new, 
+					<li><font size="2">Small icon (16x16) is brand new,
 					redesigned so that it is clearer</font></li>
-					<li><font size="2">Application resolution is no longer 
+					<li><font size="2">Application resolution is no longer
 					virtualized in high-DPI mode in Windows Vista</font></li>
-					<li><font size="2">Fixed race-condition related crash with 
-					Edit-&gt;Paste and Move Selected Pixels tool (&quot;Object is in use 
+					<li><font size="2">Fixed race-condition related crash with
+					Edit-&gt;Paste and Move Selected Pixels tool (&quot;Object is in use
 					elsewhere&quot;)</font></li>
-					<li><font size="2">Fixed some font related crashes that 
+					<li><font size="2">Fixed some font related crashes that
 					occur when standard fonts are corrupt or missing</font></li>
-					<li><font size="2">Fixed a crash that sometimes occurs when 
+					<li><font size="2">Fixed a crash that sometimes occurs when
 					trying to save files whose name begins with a period</font></li>
-					<li><font size="2">Fixed a rare division-by-zero crash in 
+					<li><font size="2">Fixed a rare division-by-zero crash in
 					the Clone Stamp</font></li>
 					<li><font size="2">Fixed rare crash related to scanning</font></li>
-					<li><font size="2">Mitigated rare crash that can happen in 
-					various places, (&quot;GetRegionData returned false, 
+					<li><font size="2">Mitigated rare crash that can happen in
+					various places, (&quot;GetRegionData returned false,
 					GetLastError() = 6&quot;)</font></li>
 					<li><font size="2">Improved crash log reporting</font></li>
 				</ul>
 				<p>
 				<strong><font size="2"><a name="v2_61"></a></font></strong>
-				<font size="2"> 
+				<font size="2">
 				<b>v2.61</b> Released: March 29th, 2006<br>
-				This small update fixes a few uncommon bugs, and adds a &quot;Donate&quot; 
+				This small update fixes a few uncommon bugs, and adds a &quot;Donate&quot;
 				item to the Help menu that links to our <a href="donate.html">
 				donation page</a>.</font></p>
 				<ul>
-					<li><font size="2">Fixed crash when clicking File-&gt;New when 
+					<li><font size="2">Fixed crash when clicking File-&gt;New when
 					there is a malformed image in the clipboard</font></li>
-					<li><font size="2">Fixed several crashes related to pressing 
-					Ctrl+Z (Undo) or Ctrl+Y (Redo) before releasing the mouse 
+					<li><font size="2">Fixed several crashes related to pressing
+					Ctrl+Z (Undo) or Ctrl+Y (Redo) before releasing the mouse
 					button while still drawing</font></li>
-					<li><font size="2">Fixed Zoom Tool &quot;haze&quot; remaining after 
+					<li><font size="2">Fixed Zoom Tool &quot;haze&quot; remaining after
 					pressing Ctrl+Z before releasing the mouse button</font></li>
-					<li><font size="2">Fixed uninstaller not removing 
+					<li><font size="2">Fixed uninstaller not removing
 					Start-&gt;Programs menu shortcut</font></li>
-					<li><font size="2">Fixed &quot;Auto&quot; button in 
+					<li><font size="2">Fixed &quot;Auto&quot; button in
 					Adjustments-&gt;Levels not updating one of its sliders</font></li>
 					<li><font size="2">Fixed a few small plugin API problems</font></li>
-					<li><font size="2">Fixed a race condition in the file 
+					<li><font size="2">Fixed a race condition in the file
 					loading code related to EXIF tags</font></li>
 					<li><font size="2">Added &quot;Donate&quot; to Help menu</font></li>
 				</ul>
 				<p>
 				<strong><font size="2"><a name="v2_6"></a></font></strong>
-				<font size="2"> 
+				<font size="2">
 				<b>v2.6</b> Released: February 24th, 2006<br>
-				This release is an upgrade of v2.5 that utilizes the brand new 
-				.NET Framework v2.0 runtime. It introduces full 64-bit support, 
-				an aesthetically updated user interface, better performance, a 
+				This release is an upgrade of v2.5 that utilizes the brand new
+				.NET Framework v2.0 runtime. It introduces full 64-bit support,
+				an aesthetically updated user interface, better performance, a
 				new &quot;Curves&quot; adjustment, and seven new layer blend modes. </font></p>
 				<p><font size="2">
 				<b>What&#39;s new in Paint.NET v2.6?</b></font></p>
 				<ul>
-					<li><font size="2"><b>Full 64-bit support</b>, for both x64 
+					<li><font size="2"><b>Full 64-bit support</b>, for both x64
 					and Itanium systems</font></li>
-					<li><font size="2">New &quot;Curves&quot; adjustment for editing an 
+					<li><font size="2">New &quot;Curves&quot; adjustment for editing an
 					image&#39;s color curves</font></li>
-					<li><font size="2">Seven new layer blend modes: Color Burn, 
+					<li><font size="2">Seven new layer blend modes: Color Burn,
 					Color Dodge, Reflect, Glow, Overlay, Negation, and Xor</font></li>
-					<li><font size="2">Aesthetic improvements to the entire user 
+					<li><font size="2">Aesthetic improvements to the entire user
 					interface</font></li>
-					<li><font size="2">Better performance, especially for 64-bit 
+					<li><font size="2">Better performance, especially for 64-bit
 					systems</font></li>
-					<li><font size="2">Zooming, esp. with the mouse wheel, has 
+					<li><font size="2">Zooming, esp. with the mouse wheel, has
 					been enhanced</font></li>
-					<li><font size="2">Rewritten layer composition engine is now 
+					<li><font size="2">Rewritten layer composition engine is now
 					mathematically correct, and faster</font></li>
-					<li><font size="2">Deployment via AD/GPO is now much easier 
+					<li><font size="2">Deployment via AD/GPO is now much easier
 					(use /createMsi with setup package)</font></li>
-					<li><font size="2">User interface now works correctly in 
+					<li><font size="2">User interface now works correctly in
 					high-DPI (120dpi, 144dpi, 196dpi)</font></li>
-					<li><font size="2">Layers window list is no longer &quot;upside 
+					<li><font size="2">Layers window list is no longer &quot;upside
 					down&quot;</font></li>
 					<li><font size="2">Upgraded to use .NET Framework 2.0</font></li>
 					<li><font size="2"><u>Many</u> other improvements and fixes</font></li>
@@ -1202,109 +1445,109 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 				<br>Released: November 26th, 2005 -
 				<a href="download.html">Download</a><br>
 				<br>
-				The major goals of this release were to improve performance, 
-				expand selection support to be much more useful and powerful, 
-				provide support for localization to other languages, and to have 
-				an easier way for users to have the latest version (update 
-				manager). Other features added include the ability to work with 
-				measurements in inches and centimeters, a 3D Rotate/Zoom effect, 
-				Sepia adjustment, Radial Blur and Add Noise effects, GIF 
-				transparency support, TGA file format support, file format 
+				The major goals of this release were to improve performance,
+				expand selection support to be much more useful and powerful,
+				provide support for localization to other languages, and to have
+				an easier way for users to have the latest version (update
+				manager). Other features added include the ability to work with
+				measurements in inches and centimeters, a 3D Rotate/Zoom effect,
+				Sepia adjustment, Radial Blur and Add Noise effects, GIF
+				transparency support, TGA file format support, file format
 				plugin support, and a refined Text tool. </font></p>
 				<p><font size="2">
 				<b>What&#39;s new in Paint.NET v2.5?</b></font></p>
 				<ul>
 					<li><font size="2">Faster performance and lower memory usage</font></li>
-					<li><font size="2">Full flexibility for scaling, rotating, 
+					<li><font size="2">Full flexibility for scaling, rotating,
 					and moving selections and selected pixels</font></li>
-					<li><font size="2">Ability to subtract from and add to 
+					<li><font size="2">Ability to subtract from and add to
 					selections</font></li>
 					<li><font size="2">Internationalization (I18N) support</font></li>
 					<li><font size="2">Officially available in German</font></li>
-					<li><font size="2">Line / Curve tool lets you draw spline 
+					<li><font size="2">Line / Curve tool lets you draw spline
 					and Bézier curves</font></li>
-					<li><font size="2">Ability to work in measurements of inches 
+					<li><font size="2">Ability to work in measurements of inches
 					and centimeters</font></li>
-					<li><font size="2">3D Rotate / Zoom effect lets you rotate, 
+					<li><font size="2">3D Rotate / Zoom effect lets you rotate,
 					tilt, and tile images at various perspectives</font></li>
 					<li><font size="2">Radial Blur and Add Noise effects</font></li>
 					<li><font size="2">Sepia adjustment</font></li>
-					<li><font size="2">Improved Text Tool, including higher 
+					<li><font size="2">Improved Text Tool, including higher
 					quality font rendering</font></li>
 					<li><font size="2">GIF transparency support</font></li>
 					<li><font size="2">TGA file format support</font></li>
-					<li><font size="2">Greater extensibility with a brand new 
+					<li><font size="2">Greater extensibility with a brand new
 					File Format API</font></li>
 					<li><font size="2">Simpler, faster setup wizard</font></li>
-					<li><font size="2">Update manager simplifies getting the 
+					<li><font size="2">Update manager simplifies getting the
 					latest version</font></li>
-					<li><font size="2">Cleaner user interface with none of the 
+					<li><font size="2">Cleaner user interface with none of the
 					annoying flickering of past releases</font></li>
-					<li><font size="2"><u>Many</u> other changes, improvements, 
+					<li><font size="2"><u>Many</u> other changes, improvements,
 					and fixes</font></li>
 				</ul>
-				<p><a name="v2_1" id="v2_1"></a><strong><font size="2">Paint.NET 
+				<p><a name="v2_1" id="v2_1"></a><strong><font size="2">Paint.NET
 				v2.1</font></strong><font size="2"> <br>
 				v2.1b Released: May 12th, 2005 - <a href="download.html">
 				Download</a><br>
-				This small updated fixes a crash when resizing an image with a 
+				This small updated fixes a crash when resizing an image with a
 				new width but the same height.<br>
 				<br>
 				v2.1a Released: May 5th, 2005<br>
-				This small update fixed a few crashes that people were 
-				experiencing related to the &quot;Open&quot; and &quot;Save As&quot; dialogs. If you 
-				are not experiencing these crashes with v2.1 then you do not 
+				This small update fixed a few crashes that people were
+				experiencing related to the &quot;Open&quot; and &quot;Save As&quot; dialogs. If you
+				are not experiencing these crashes with v2.1 then you do not
 				need to download this update.<br>
 				<br>
 				v2.1 Released: April 30th, 2005<br>
-				The major goals of this release were to improve performance, 
-				refine the user interface and experience, and to support some 
-				highly requested features such as PNG transparency support and 
-				JPEG quality configuration. To summarize, Paint.NET v2.1 is much 
-				faster, more compatible, and produces better quality images than 
+				The major goals of this release were to improve performance,
+				refine the user interface and experience, and to support some
+				highly requested features such as PNG transparency support and
+				JPEG quality configuration. To summarize, Paint.NET v2.1 is much
+				faster, more compatible, and produces better quality images than
 				v2.0. It is a highly recommended upgrade. </font>
 				</p>
 				<ul>
-					<li><font size="2">Many bug fixes and miscellaneous user 
+					<li><font size="2">Many bug fixes and miscellaneous user
 					interface tweaks.</font></li>
-					<li><font size="2">Installation via Group Policy is now 
+					<li><font size="2">Installation via Group Policy is now
 					supported.</font></li>
-					<li><font size="2">Rendering quality, usage, and performance 
+					<li><font size="2">Rendering quality, usage, and performance
 					of selections is improved.</font></li>
 					<li><font size="2">Much better performance all around.</font></li>
 					<li><font size="2">Magic Wand selection tool.</font></li>
 					<li><font size="2">Ellipse/circle selection tool.</font></li>
 					<li><font size="2">PNG transparency is now supported.</font></li>
 					<li><font size="2">GIF save quality significantly improved.</font></li>
-					<li><font size="2">JPEG quality selector and preview, and 
+					<li><font size="2">JPEG quality selector and preview, and
 					file size preview.</font></li>
-					<li><font size="2">Upgraded PDN file format to support very 
+					<li><font size="2">Upgraded PDN file format to support very
 					large images.</font></li>
-					<li><font size="2">Thumbnails are now shown for .PDN files 
+					<li><font size="2">Thumbnails are now shown for .PDN files
 					in Windows Explorer.</font></li>
-					<li><font size="2">Much higher quality rendering when 
+					<li><font size="2">Much higher quality rendering when
 					zooming out.</font></li>
 					<li><font size="2">Background layer is no longer &quot;locked&quot;.</font></li>
-					<li><font size="2">EXIF data is now preserved for supporting 
+					<li><font size="2">EXIF data is now preserved for supporting
 					file formats.</font></li>
-					<li><font size="2">Lower memory usage. History items are now 
+					<li><font size="2">Lower memory usage. History items are now
 					saved to disk instead of completely stored in memory.</font></li>
-					<li><font size="2">Better Tablet PC support. Also, Ink isn&#39;t 
-					used unless you have a Tablet PC; this has increased 
+					<li><font size="2">Better Tablet PC support. Also, Ink isn&#39;t
+					used unless you have a Tablet PC; this has increased
 					compatibility and performance on regular systems.</font></li>
-					<li><font size="2">Ability to resize image based on a 
+					<li><font size="2">Ability to resize image based on a
 					percentage.</font></li>
-					<li><font size="2">Brand new image resampling routines for 
+					<li><font size="2">Brand new image resampling routines for
 					Image-&gt;Resize menu item (no more transparent borders).</font></li>
 					<li><font size="2">No more flickering in the UI.</font></li>
-					<li><font size="2">More optimizations for multiprocessor and 
+					<li><font size="2">More optimizations for multiprocessor and
 					multicore systems.</font></li>
 					<li><font size="2">Startup time is greatly reduced.</font></li>
 				</ul>
 				<strong><font size="2"><a name="v2_0"></a>Paint.NET v2.0 <br>
 				</font></strong><font size="2">Released: December 17th, 2004<br>
-				This was the release that was Slashdotted. Many important 
-				features were added and the stability of the product was 
+				This was the release that was Slashdotted. Many important
+				features were added and the stability of the product was
 				increased. </font>
 				<ul>
 					<li><font size="2">Windows 2000 Compatible </font></li>
@@ -1313,23 +1556,23 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 					<li><font size="2">Clone Tool </font></li>
 					<li><font size="2">Color Replace Tool </font></li>
 					<li><font size="2">Zoom Tool </font></li>
-					<li><font size="2">Edge Detect Effect (Developed by Chris 
+					<li><font size="2">Edge Detect Effect (Developed by Chris
 					Crosetto) </font></li>
-					<li><font size="2">Relief Effect (Developed by Chris 
+					<li><font size="2">Relief Effect (Developed by Chris
 					Crosetto) </font></li>
-					<li><font size="2">New emboss effect (Developed by Chris 
+					<li><font size="2">New emboss effect (Developed by Chris
 					Crosetto) </font></li>
 					<li><font size="2">New oil painting effect </font></li>
 					<li><font size="2">New Frosted glass effect </font></li>
 					<li><font size="2">Red Eye removal effect </font></li>
 					<li><font size="2">Grid Mode when zoomed in close </font>
 					</li>
-					<li><font size="2">Help text for each tool displayed on the 
+					<li><font size="2">Help text for each tool displayed on the
 					status bar </font></li>
 					<li><font size="2">Import Image to New Layers</font></li>
-					<li><font size="2">Variable zoom (not constrained to 
+					<li><font size="2">Variable zoom (not constrained to
 					powers-of-2)</font></li>
-					<li><font size="2">Moving a selection makes the marching 
+					<li><font size="2">Moving a selection makes the marching
 					ants disappear</font></li>
 					<li><font size="2">Ability to adjust Hue / Saturation </font>
 					</li>
@@ -1337,12 +1580,12 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 					</li>
 					<li><font size="2">Additional keyboard shortcuts </font>
 					</li>
-					<li><font size="2">Subtraction/difference blend operation 
+					<li><font size="2">Subtraction/difference blend operation
 					for layers </font></li>
-					<li><font size="2">Image to auto zoom until fit inside 
+					<li><font size="2">Image to auto zoom until fit inside
 					window
 					</font></li>
-					<li><font size="2">Tolerance Slider for adjustments for 
+					<li><font size="2">Tolerance Slider for adjustments for
 					paint bucket and color replace </font></li>
 					<li><font size="2">Cursor transitions for tool actions
 					</font></li>
@@ -1354,56 +1597,56 @@ Submit issues <a href="https://github.com/riverar/getpaintdotnet/issues">via Git
 				</font></strong>
 				<font size="2">Released: October 1st, 2004<br>
 				This release included many user interface tweaks and bug fixes.</font><ul>
-					<li><font size="2">New Effect: &quot;RotoZoomer&quot; which can 
+					<li><font size="2">New Effect: &quot;RotoZoomer&quot; which can
 					perform arbitrary angle rotation, and zooming.</font></li>
 					<li><font size="2">More responsive Effect preview rendering.</font></li>
 					<li><font size="2">Faster application startup time.</font></li>
-					<li><font size="2">&quot;Open Recent&quot; menu keeps track of the 
-					last 8 images you worked with, along with a thumbnail for 
+					<li><font size="2">&quot;Open Recent&quot; menu keeps track of the
+					last 8 images you worked with, along with a thumbnail for
 					each.</font></li>
-					<li><font size="2">Selecting an area now draws an outline 
+					<li><font size="2">Selecting an area now draws an outline
 					along with the blue highlight.</font></li>
-					<li><font size="2">Layer Properties now visually previews 
-					and updates all properties in real time without having to 
+					<li><font size="2">Layer Properties now visually previews
+					and updates all properties in real time without having to
 					press the &quot;Apply&quot; button.</font></li>
-					<li><font size="2">Invert and Desaturate are put into the 
-					Layers -&gt; Adjustments menu, along with a new adjustment 
+					<li><font size="2">Invert and Desaturate are put into the
+					Layers -&gt; Adjustments menu, along with a new adjustment
 					called &quot;Brightness &amp; Contrast.&quot;</font></li>
-					<li><font size="2">Better performance when running in a 
-					Remote Desktop session by way of disabling dialog box / 
+					<li><font size="2">Better performance when running in a
+					Remote Desktop session by way of disabling dialog box /
 					toolform transparency.</font></li>
-					<li><font size="2">Zoom works correctly now: when you zoom 
-					in or out, the image will be centered to the intuitively 
+					<li><font size="2">Zoom works correctly now: when you zoom
+					in or out, the image will be centered to the intuitively
 					correct location.</font></li>
-					<li><font size="2">Lower memory usage and better resource 
+					<li><font size="2">Lower memory usage and better resource
 					usage in general.</font></li>
 					<li><font size="2">&quot;Paste&quot; now works with the Text tool.</font></li>
-					<li><font size="2">The location that images are pasted to is 
+					<li><font size="2">The location that images are pasted to is
 					more intuitive in some scenarios.</font></li>
-					<li><font size="2">Improved &quot;History&quot; toolform user 
+					<li><font size="2">Improved &quot;History&quot; toolform user
 					interface.</font></li>
-					<li><font size="2">User interface upgraded to make full use 
-					of XP themes. In v1.0, many dropdown boxes and &quot;updowns&quot; had 
+					<li><font size="2">User interface upgraded to make full use
+					of XP themes. In v1.0, many dropdown boxes and &quot;updowns&quot; had
 					a Win2K/OfficeXP look to them.</font></li>
-					<li><font size="2">Other miscellaneous user interface 
+					<li><font size="2">Other miscellaneous user interface
 					tweaks.</font></li>
-					<li><font size="2">Many &quot;under the hood&quot; improvements, 
+					<li><font size="2">Many &quot;under the hood&quot; improvements,
 					tweaks, bug fixes and refactorizations.</font></li>
-					<li><font size="2">New file format. Paint.NET v1.1 stores 
-					files with a &quot;.pdn&quot; extension which is not compatible with 
+					<li><font size="2">New file format. Paint.NET v1.1 stores
+					files with a &quot;.pdn&quot; extension which is not compatible with
 					Paint.NET v1.0&#39;s &quot;.lbmp&quot; extension.</font></li>
-					<li><font size="2">Extensibility! After you install the 
-					program, check out the &quot;RotoZoomerSource.zip&quot; for an example 
-					of how to write an Effect plugin. You will need Visual 
-					Studio 2003 .NET to write a new plugin. No other types of 
+					<li><font size="2">Extensibility! After you install the
+					program, check out the &quot;RotoZoomerSource.zip&quot; for an example
+					of how to write an Effect plugin. You will need Visual
+					Studio 2003 .NET to write a new plugin. No other types of
 					plugins are supported for v1.1. </font></li>
 				</ul>
 				<strong><font size="2"><a name="v1_0"></a>Paint.NET v1.0 </font></strong>
 				<font size="2"><br>
 				Released: May 6th, 2004<br>
-				The original project that started it all. This was completed in 
+				The original project that started it all. This was completed in
 				15 weeks as an undergraduate senior design project at
-				<a href="http://www.wsu.edu">WSU</a>, and was 36,000 lines of 
+				<a href="http://www.wsu.edu">WSU</a>, and was 36,000 lines of
 				code.</font><p>&nbsp;</font></td>
 			</tr>
 		</table>
